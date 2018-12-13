@@ -132,3 +132,5 @@ LOGIN_REDIRECT_URL = '/'
 #parent_dir = os.path.abspath(os.path.dirname(__file__) + '/..')
 #MEDIA_ROOT = os.path.join(parent_dir, 'media/')
 #MEDIA_URL = 'media/'
+
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]', '*.pythonanywhere.com']
