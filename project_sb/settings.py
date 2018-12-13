@@ -25,8 +25,7 @@ SECRET_KEY = 'pfe7-uls+erb&q)4xe3k)5kozhcdfwnvm^_%8sndm&xu4@1%xj'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]', '.pythonanywhere.com']
 
 # Application definition
 
@@ -133,4 +132,3 @@ LOGIN_REDIRECT_URL = '/'
 #MEDIA_ROOT = os.path.join(parent_dir, 'media/')
 #MEDIA_URL = 'media/'
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]', '*.pythonanywhere.com']
