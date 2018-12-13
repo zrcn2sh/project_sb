@@ -1,0 +1,117 @@
+{% extends "base_Product.html" %}
+
+{% block content %}
+<ul>
+    <h1><B>견적 요청 관리</B></h1>
+    <li><a href="#" onclick="javascript:window.open('/Prod/quotationnew','popup','scrollbars=no, resizable=no width=800,height=600')">New</a></li>
+</ul>
+
+    <table class="table table-striped">
+         <thread>
+            <tr align="center">
+                <td><B>ID</B></td>
+                <td><B>요청번호</B></td>
+                <td><B>부서명/영업사원명</B></td>
+                <td><B>거래처명/렌탈여부</B></td>
+                <td><B>입찰여부</B></td>
+                <td width="200"><B>요청사항</B></td>
+                <td><B>납품예상일자</B></td>
+                <td><B>최종상태</B></td>
+                <td><B>접수</B></td>
+                <td><B>요청</B></td>
+                <td><B>제안</B></td>
+                <td><B>발주</B></td>
+                <td><B>변경</B></td>
+                <td><B>실패</B></td>
+                <td><B>매입사</B></td>
+                <!--td><B>요청사</B></td-->
+                <td><B>기타사항</B></td>
+                <td><B>캐논제안/<br>납품현황</B></td>
+                {% if user.couser.UserType == 'A' or user.couser.UserType == 'I' or user.couser.UserType == 'M' %}
+                <td><B>Action</B></td>
+                {% endif %}
+                <!--td><B>실패사유</B></td-->
+
+            </tr>
+
+        </thread>
+        <tbody>
+            {% for quotation in quotation %}
+            <tr align="center">
+                <td>{{ quotation.id }}</td>
+                <td><a href="#" onclick="javascript:window.open('{{ base_dir }}/Prod/quotationedit/{{ quotation.id }}'
+                ,'popup','scrollbars=no, resizable=no width=800,height=600')">{{ quotation.ReqNo }}</a><br>{{ quotation.OriginReqNo }}</td>
+                <td>{{ quotation.DeptCode }}<br>{{ quotation.EmpNo }}</td>
+                <td>{{ quotation.Custname }}<br>
+                    {% if quotation.Rental_YN == True %}
+                        ({{ quotation.RPCustname }})
+                    {% else %}
+
+                    {% endif %}
+
+                </td>
+                <td>{{ quotation.Bid_YN }}</td>
+                <td align="left">{{ quotation.ReqProd|linebreaksbr }}</td>
+                <td>{{ quotation.ShipDT|date:"y.m" }}</td>
+                <td>{{ quotation.get_Status_display }}</td>
+                <td>{% if quotation.StatusA_Date is null %}N{% else %}Y<br>
+                    <font size = '1'>{{ quotation.StatusA_Date|date:"m.d" }}{% endif %}</font></td>
+                <td>{% if quotation.StatusR_Date is null %}N{% else %}Y<br>
+                    <font size = '1'>{{ quotation.StatusR_Date|date:"m.d" }}{% endif %}</font></td>
+                <td>{% if quotation.StatusS_Date is null %}N{% else %}Y<br>
+                   <font size = '1'>{{ quotation.StatusS_Date|date:"m.d" }}{% endif %}</font></td>
+                <td>{% if quotation.StatusO_Date is null %}N{% else %}Y<br>
+                   <font size = '1'>{{ quotation.StatusO_Date|date:"m.d" }}{% endif %}</font></td>
+                <td>{% if quotation.StatusC_Date is null %}N{% else %}Y<br>
+                    <font size = '1'>{{ quotation.StatusC_Date|date:"m.d" }}{% endif %}</font></td>
+                <td>{% if quotation.StatusF_Date is null %}N{% else %}Y<br>
+                    <font size = '1'>{{ quotation.StatusF_Date|date:"m.d" }}{% endif %}</font></td>
+                <td>{{ quotation.ReqVendor1 }}<br>{{ quotation.ReqVendor2 }}<br>{{ quotation.ReqVendor3 }}
+                </td>
+                <!--td>{{ quotation.VendorReqUser }}</td-->
+                <td><a href="#" title ="{{ quotation.Remark }}">상세</a></td>
+                <td><a href="#" title="{{ quotation.CanonETC }}">상세</a></td>
+                {% if user.couser.UserType == 'A' or user.couser.UserType == 'I' or user.couser.UserType == 'M' %}
+                <td>
+                    {% if quotation.Status == 'A' %}
+                    <button type ="button" onclick="window.open('{{ base_dir }}/Prod/sendmail/{{ quotation.id }}','popup','scrollbars=no, resizable=no width=400,height=600')">
+                        <font size = '2'><b>메일발송</b></font></button>
+                    <button type ="button" onclick="window.open('{{ base_dir }}/Order/offernew/{{ quotation.id }}','popup','scrollbars=no, resizable=no width=800,height=600')">
+                        <font size = '2'><b>가격설정</b></font></button>
+                    {% elif quotation.Status == 'R' %}
+                    <button type ="button" onclick="window.open('{{ base_dir }}/Order/offernew/{{ quotation.id }}','popup','scrollbars=no, resizable=no width=800,height=600')">
+                        <font size = '2'><b>가격설정</b></font></button>
+                    {% endif %}
+                    <button type ="button" onclick="window.open('{{ base_dir }}/Prod/quotationchange/{{ quotation.id }}','popup','scrollvars=no, resizable=no width=800,height=600')">
+                        <font size = '2'><b>변경</b></font></button>
+                    <button type ="button"><font size = '2'><b>실패</b></font></button>
+                </td>
+                {% endif %}
+                <!--td>
+                    {% if quotation.FailReason is NULL or quotation.FailReason == '' %}
+                    {% else %}
+                        <a href="#" title="{{ quotation.FailReason }}">상</a>
+                    {% endif %}
+                </td-->
+            </tr>
+
+            {% endfor %}
+        </tbody>
+    </table>
+    <!--table>
+        <tr>
+            <td>벤더코드 : </td>
+            <td>
+                {{form.id}}
+                {{form.VendorCode.help_text}}
+            </td>
+        </tr>
+    </table>
+    <table>
+         {% for Vendor in object_list %}
+            <li><{{ Vendor.id }}</a></li>
+        {% endfor %}
+    </table>
+
+{% endblock content %}
+

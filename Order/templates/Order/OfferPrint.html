@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load humanize %}
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    {% for offerprice in offerprice %}
+    <title>가격 제안 출력 : {{ offerprice.OfferNo }}</title>
+    {% endfor %}
+    <style>
+
+        table, th, td, tr {
+            font-family: MyFont;
+            border: 1px solid #bcbcbc;
+            border-collapse: collapse;
+            padding: 5px;
+            font-size : 14px;
+            vertical-align: middle;
+            margin: 1px 1px 1px 1px;
+        }
+
+
+    </style>
+</head>
+<body>
+{% for offerprice in offerprice %}
+    <h2>ITS 상품 가격 설정</h2>
+    <h4>1. 요청 정보</h4>
+    <table>
+        <tr>
+            <th width="100px" bgcolor="#dcdcdc">거래처명</th>
+            <th width="300px">{{ offerprice.ReqNo.Custname }}
+                {% if offerprice.ReqNo.Rental_YN == True %}
+                   / ({{ offerprice.ReqNo.RPCustname }})
+                {% endif %}
+            </th>
+        </tr>
+        <tr>
+            <th width="100px" bgcolor="#dcdcdc">요청부서</th>
+            <th width="300px">{{ offerprice.ReqNo.DeptCode }}</th>
+        </tr>
+        <tr>
+            <th width="100px" bgcolor="#dcdcdc">요청사원</th>
+            <th width="300px">{{ offerprice.ReqNo.EmpNo }}</th>
+        </tr>
+    </table>
+        <h4>2. 가격 설정</h4>
+        <h6 align="right">(단위 : EA, 원)</h6>
+        <table>
+            <thead bgcolor="#dcdcdc">
+                <tr>
+                    <th rowspan="2" width="80px">구분</th>
+                    <th rowspan="2" width="100px">브랜드</th>
+                    <th rowspan="2" width="200px">물품명</th>
+                    <th rowspan="2" width="40px">수량</th>
+                    <th colspan="2" width="160px">매입</th>
+                    <th colspan="3" width="220px">매출</th>
+                    <!--th rowspan="2" width="100px">비고</th-->
+                </tr>
+                <tr>
+                    <th width="80px">단가</th>
+                    <th width="100px">합계</th>
+                    <th width="80px">단가</th>
+                    <th width="100px">합계</th>
+                    <!--th width="100px">마진</th-->
+                    <th width="80px">매출이익율</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for offerpricedetail in offerprice.Offer_No.all %}
+                <tr>
+                    <td align="center">{{ offerpricedetail.ProdCode.get_ProdDiv_display }}</td>
+                    <td align="center">{{ offerpricedetail.ProdCode.ProdBrand }}</td>
+                    <td align="center">{{ offerpricedetail.ProdCode.ProdName }}</td>
+                    <td align="center">{{ offerpricedetail.Qty|intcomma }}</td>
+                    <td align="right">{{ offerpricedetail.CoPrice|intcomma }}</td>
+                    <td align="right">{{ offerpricedetail.CoPriceSum|intcomma }}</td>
+                    <td align="right">{{ offerpricedetail.OfferPrice|intcomma }}</td>
+                    <td align="right">{{ offerpricedetail.OfferPriceSum|intcomma }}</td>
+                    <!--td align="right">{{ offerpricedetail.MarginSum|intcomma }}</td-->
+                    <td align="right">{{ offerpricedetail.Margin|floatformat:2 }} %</td>
+                    <!--td width="100px"></td-->
+                </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot bgcolor="#ffbcbc">
+                <tr>
+                    <th colspan="3">소계</th>
+                    <td align="center">{{ offerprice.qtytotal|intcomma }}</td>
+                    <td> </td>
+                    <td align="right">{{ offerprice.copricetotal|intcomma }}</td>
+                    <td> </td>
+                    <td align="right">{{ offerprice.offerpricetotal|intcomma }}</td>
+                    <!--td align="right">{{ offerprice.margintotal|intcomma }}</td-->
+                    <td align="right">{{ offerprice.totalmargin|floatformat:2 }} %</td>
+                    <!--td width="100px"></td-->
+                </tr>
+            </tfoot>
+        </table>
+    <h6 align="right">ReqNO : {{ offerprice.OfferNo }}</h6>
+{% endfor %}
+</body>
+</html>

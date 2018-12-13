@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        table, th, td, tr {
+            font-family: MyFont;
+            border: 1px solid #bcbcbc;
+            border-collapse: collapse;
+            padding: 5px;
+            font-size : 14px;
+            vertical-align: middle;
+            margin: 1px 1px 1px 1px;
+        }
+    </style>
+</head>
+<body>
+    <h3><B>메일 발송</B></h3>
+    {% for quotation in quotation %}
+
+    <table>
+        <tr>
+            <th bgcolor="#dcdcdc">메일제목 : </th>
+            <th align = "left">견적요청 - {{ quotation.Custname }}</th>
+        </tr>
+        <tr>
+            <th bgcolor="#dcdcdc">수신인 : </th>
+            <th align = "left">{{ quotation.ReqVendor1 }} / {{ quotation.ReqVendor2 }} / {{ quotation.ReqVendor3 }}</th>
+        </tr>
+        <tr>
+            <th bgcolor="#dcdcdc">메일내용 : </th>
+            <th align = "left">안녕하십니까? 캐논코리아 {{ user.couser.UserName }}입니다.<br>
+            <br>
+            하기 건 견적요청 드리오니 확인 부탁 드리겠습니다.
+            <br><br>
+            [요청사항] <br>
+            {{ quotation.ReqProd|linebreaksbr }}
+            <br><br>
+            이상입니다. 감사합니다.</th>
+        </tr>
+    </table>
+    <br>
+
+    <!--button type = "button" id="bt1" onclick="location.href='mailto:{{ quotation.ReqVendor1.ContactMail1 }}
+    ?subject='견적요청 - {{ quotation.Custname }}'&body='안녕하십니까? 캐논코리아 {{ user.couser.UserName }}'이상입니다. 감사합니다.'">메일 발송</button-->
+        <a href="mailto:{{ user.couser.Email }}?bcc={{ quotation.ReqVendor1.ContactMail1 }}
+        {% if quotation.ReqVendor1.ContactMail2 != None and quotation.ReqVendor1.ContactMail2 != null %}
+        ;{{ quotation.ReqVendor1.ContactMail2 }}
+        {% endif %}
+        {% if quotation.ReqVendor2.ContactMail1 != None and quotation.ReqVendor2.ContactMail1 != null %}
+        ;{{ quotation.ReqVendor2.ContactMail1 }}
+        {% endif %}
+        {% if quotation.ReqVendor2.ContactMail2 != None and quotation.ReqVendor2.ContactMail2 != null %}
+        ;{{ quotation.ReqVendor2.ContactMail2 }}
+        {% endif %}
+        {% if quotation.ReqVendor3.ContactMail1 != None and quotation.ReqVendor3.ContactMail1 != null %}
+        ;{{ quotation.ReqVendor3.ContactMail1 }}
+        {% endif %}
+        {% if quotation.ReqVendor3.ContactMail2 != None and quotation.ReqVendor3.ContactMail2 != null %}
+        ;{{ quotation.ReqVendor3.ContactMail2 }}
+        {% endif %}
+        &subject=견적요청 - {{ quotation.Custname }}
+        &body=안녕하십니까? 캐논코리아 {{ user.couser.UserName }} 입니다.%0D%0A %0D%0A
+하기 건 견적요청 드리오니 확인 부탁 드리겠습니다.%0D%0A %0D%0A
+[요청사항] %0D%0A
+{{ quotation.ReqProd|linebreaksbr }} %0D%0A %0D%0A
+이상입니다. 감사합니다.">메일 발송</a>
+
+
+
+    {% endfor %}
+</body>

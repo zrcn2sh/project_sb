@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style type="text/css">
+        .sidebar > ul {
+            width:1000px; height:30px; background:white; list-style:none; padding-top:15px;
+            }
+        .sidebar > ul > li {
+            display: inline-block;
+            width : 100px;
+            border : 1px solid #09C;
+            margin : 3px 0;
+            padding : 5px;
+            text-align : center;
+            }
+        .sidebar > ul > li > ul {
+            position: absolute;
+            list-style-type : none;
+            padding-left : 0px;
+            display : none;
+            }
+        .sidebar > ul > li:hover > ul {
+            display : block;
+            }
+        .sidebar > ul > li:hover > ul > li {
+            display: inline-block;
+            width : 100px;
+            margin : 3px 0;
+            padding : 5px;
+            text-align : center;
+            }
+    </style>
+    {% load static %}
+    <link rel="stylesheet" href="{% static "admin/css/base.css" %}">
+    <title>{% block title %}ITS Information{% endblock %}</title>
+
+</head>
+<body>
+    <div class = "login">
+        {% if user.username %}
+            <h4 align="right">{{ user.couser.UserName }} 님 반갑습니다.</h4>
+        {% else %}
+            <h4 align="right"><a href="./login">로그인_____</a></h4>
+        {% endif %}
+    </div>
+    <div class="sidebar">
+        {% block sidebar %}
+            <ul>
+                <li><a href="/">Home</a></li>
+                {% if user.couser.UserType == 'A' %}
+                <li><a href="/admin/">관리자</a></li>
+                {% endif %}
+                <li>
+                    <a href="/MST/vendor">기본관리</a>
+                    <ul>
+                        <li><a href="/MST/vendor">매입사관리</a></li>
+                        <li><a href="#">매입사평가</a></li>
+                        <li><a href="/Prod/product">물품관리</a></li>
+                        <!--li><a href="/MST/dept">부서관리</a></li-->
+                        <!--li><a href="#">사원관리</a></li-->
+                    </ul>
+                </li>
+                <li><a href="#">견적관리</a>
+                    <ul>
+                        <li><a href="/Prod/quotation">견적의뢰</a></li>
+                        <li><a href="/Order/offer">견적등록</a></li>
+                        <!--li><a href="/Prod/product">Product</a></li-->
+                        <!--ii><a href="/Prod/inventory">Inventory</a></li-->
+                    </ul>
+                </li>
+                <li><a href="#">발주관리</a>
+                    <ul>
+                        <li><a href="/Order/order">발주내역</a></li>
+                        <li><a href="/Order/rental">렌탈관리</a></li>
+                        <li><a href="/Order/monthlyclosing">월마감내역</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">손익관리</a>
+                    <ul>
+                        <li><a href="#">매입사별 손익</a></li>
+                        <li><a href="#">월별 손익</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">진도관리</a>
+                    <ul>
+                        <li><a href="#">상태조회</a></li>
+                        <li><a href="#">매출조회</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        {% endblock %}
+    </div>
+
+    <div id ="content">
+            {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

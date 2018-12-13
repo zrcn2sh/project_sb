@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load humanize %}
+<head>
+    <style type="text/css">
+        form {
+            margin : 0 0;
+            width : 450px;
+
+            padding : 1em;
+            border : 1px solid #CCC;
+            border-radius: 0.5em;
+            background-color : #f2f2f2;
+        }
+        form div + div, form div + button, form div + details, form details + div {
+            margin-top : 1em;
+        }
+        label {
+            display : inline-block;
+            width : 100px;
+            text-align : right;
+        }
+
+        input, textarea, button, select {
+            font : 1em sans-serif;
+
+            width : 300px;
+            -moz-box-sizing : border-box;
+            box-sizing : border-box;
+
+            border : 1px solid #999;
+         }
+
+         input:focus, textarea:focus {
+            border-color : #000;
+         }
+
+        button[type=submit], button[type=button] {
+            width : 100%;
+            background-color: orange;
+            color: white;
+            padding: white;
+            martgin : 8px, 0;
+            border : none;
+            border-radius : 4px;
+            cursor: pointer;
+        }
+        button[type=submit]:hover, button[type=button]:hover {
+            background-color : OrangeRed;
+        }
+
+        .itemdetail input {
+            font : 1em sans-serif;
+
+            width : 50px;
+            -moz-box-sizing : border-box;
+            box-sizing : border-box;
+
+            border : 1px solid #999;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-color: #ccc;
+            font-size: 12px;
+            font-family: "Roboto","Lucida Grande","DejaVu Sans","Bitstream Vera Sans",Verdana,Arial,sans-serif;
+            color: #333;
+        }
+
+        th, td {
+            border-bottom: .5px solid #444444;
+            padding: 5px
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>견적 제안</title>
+
+</head>
+
+<body>
+    <h3><B>견적 제안</B></h3>
+
+    <div>
+        {% for offerprice in offerprice %}
+        <form>
+            <div>
+                <label for="id_OfferNo">제안번호 : </label>
+                {{ offerprice.OfferNo }}
+            </div>
+            <div>
+                <label for="id_OriginOfferNO">원제안번호 : </label>
+                {{ offerprice.OriginOfferNO }}
+            </div>
+            <div>
+                <label for="id_ReqNo">요청번호 : </label>
+                {{ offerprice.ReqNo }}
+            </div>
+            <div>
+                <label for="id_OfferDate">요청일자 : </label>
+                {{ offerprice.OfferDate|date:"y.m.d"  }}
+            </div>
+            <div>
+                <label for="id_OfferResult">진행상태 : </label>
+                {{ offerprice.get_OfferResult_display }}
+            </div>
+            <button type="button" onclick="window.open('{{ base_dir }}/Prod/search/{{ offerprice.id }}','popup3','scrollbars=no, width=1200,height=800,left=1000')">상품검색 및 선택 >>></button>
+
+        </form>
+
+        <h3>제안 상품</h3>
+    <table class="table table-striped">
+         <thread>
+            <tr align="center">
+                <td width="100px"><B>물품명</B></td>
+                <td width="40px"><B>수량</B></td>
+                <td><B>매입가</B></td>
+                <td><B>매입합계</B></td>
+                <td><B>매출가</B></td>
+                <td><B>매출합계</B></td>
+                <td><B>마진율</B></td>
+                <td><B>Action</B></td>
+            </tr>
+
+        </thread>
+        <tbody>
+            {% for offerpricedetail in offerprice.Offer_No.all %}
+             <tr align="center">
+                 <td>{{ offerpricedetail.ProdCode }}</td>
+                 <td>{{ offerpricedetail.Qty }}</td>
+                 <td>{{ offerpricedetail.CoPrice|intcomma }}</td>
+                 <td>{{ offerpricedetail.CoPriceSum|intcomma }}</td>
+                 <td>{{ offerpricedetail.OfferPrice|intcomma }}</td>
+                 <td>{{ offerpricedetail.OfferPriceSum|intcomma }}</td>
+                 <td>{{ offerpricedetail.Margin }}%</td>
+                 <td><button type="button" onclick="window.open('{{ base_dir }}/Order/delofferdetail/{{ offerpricedetail.id }}','popup3','scrollbars=no, width=100,height=100,left=500')">삭제</button></td>
+             </tr>
+            {% endfor %}
+        </tbody>
+        </table>
+        {% endfor %}
+    </div>
+    <div>
+        <br><br>
+        <button type="button" onclick="window.close();opener.location.reload();" style="width:50px">close</button>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style type="text/css">
+        form {
+            margin : 0 0;
+            width : 450px;
+
+            padding : 1em;
+            border : 1px solid #CCC;
+            border-radius: 0.5em;
+            background-color : #f2f2f2;
+        }
+        form div + div, form div + button, form div + details, form details + div {
+            margin-top : 1em;
+        }
+        label {
+            display : inline-block;
+            width : 100px;
+            text-align : right;
+        }
+
+        input, textarea, button, select {
+            font : 1em sans-serif;
+
+            width : 300px;
+            -moz-box-sizing : border-box;
+            box-sizing : border-box;
+
+            border : 1px solid #999;
+         }
+
+         input:focus, textarea:focus {
+            border-color : #000;
+         }
+
+        button[type=submit] {
+            width : 100%;
+            background-color: orange;
+            color: white;
+            padding: white;
+            martgin : 8px, 0;
+            border : none;
+            border-radius : 4px;
+            cursor: pointer;
+        }
+        button[type=submit]:hover {
+            background-color : OrangeRed;
+        }
+
+        #DT, #MT, #NT, #SR, #ETC {
+            display: none;
+        }
+
+        #none {
+            display:none;
+            }
+    </style>
+    <meta charset="UTF-8">
+    <title>렌탈 계약 등록</title>
+
+</head>
+
+<body>
+    <h3><B>렌탈 계약 등록</B></h3>
+    <h4>* 신규 제품인 경우에는 렌탈 계약 등록 전 제품 등록하시기 바랍니다.(상품 등록 후 새로고침)
+    <button type ="button" style="width:100px" onclick="window.open('/Prod/productnew/','popupk','scrollbars=no, resizable=no width=800,height=600,top=200')">
+        <font size = '2'><b>NEW</b></font></button></h4>
+    <div>
+        <form method="POST">
+            {% csrf_token %}
+            <div>
+                {{ form.message.error }}
+                <label for="id_RentalNo">관리번호 : </label>
+                {{ form.RentalNo }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_RentalType">구분 : </label>
+                {{ form.RentalType }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_RentalStatus">상태 : </label>
+                {{ form.RentalStatus }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_DeptCode">부서명 : </label>
+                {{ form.DeptCode }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_EmpNo">사원명 : </label>
+                {{ form.EmpNo }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_Custname">거래처 : </label>
+                {{ form.Custname }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_RentalVendor">렌탈사 : </label>
+                {{ form.RentalVendor }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_RentalStartDate">렌탈시작일 : </label>
+                {{ form.RentalStartDate }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_RentalPeriod">렌탈기간(M) : </label>
+                {{ form.RentalPeriod }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_RentalProdCode">상품명 : </label>
+                {{ form.RentalProdCode }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_RentalQty">수량 : </label>
+                {{ form.RentalQty }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_RentalCoPrice">매입가격 : </label>
+                {{ form.RentalCoPrice }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_RentalOfferPrice">매출가격 : </label>
+                {{ form.RentalOfferPrice }}
+            </div>
+
+            <button type="submit" value="Submit">저장</button>
+        </form>
+    </div>
+</body>
+</html>

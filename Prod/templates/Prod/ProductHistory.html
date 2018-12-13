@@ -1,0 +1,192 @@
+
+{% extends "base_Product.html" %}
+
+{% load humanize %}
+{% block content %}
+<ul>
+    <h1><B>상품 관리</B></h1>
+    <li><a href="#" onclick="javascript:window.open('/Prod/productnew','popup','scrollbars=no, resizable=no width=800,height=600')">신규등록</a></li>
+</ul>
+
+    <table class="table table-striped">
+         <thread>
+            <tr align="center">
+                <td><B>ID</B></td>
+                <td><B>상품명</B></td>
+                <td><B>상품구분</B></td>
+                <!--td><B>상품명</B></td-->
+                <td><B>브랜드명</B></td>
+                <td><B>매입사</B></td>
+                <td><B>AX등록/일자</B></td>
+                <td><B>AX코드/명</B></td>
+                <td><B>상태</B></td>
+                <td><B>매입/매출/마진</B></td>
+                <td><B>재고운영여부</B></td>
+                <td><B>기타사항</B></td>
+                <td><B>세부사양</B></td>
+            </tr>
+
+        </thread>
+        <tbody>
+            {% for product in product %}
+            <tr align="center">
+                <td>{{ product.id }}</td>
+                <td><a href="#" onclick="javascript:window.open('{{ base_dir }}/Prod/productedit/{{ product.id }}'
+                ,'popup','scrollbars=no, resizable=no width=800,height=600')">{{ product.ProdName }}</a></td>
+                <td>{{ product.get_ProdDiv_display }}</td>
+                <!--td>{{ product.ProdName }}</td-->
+                <td>{{ product.ProdBrand }}</td>
+                <td>{{ product.VendorCode }}</td>
+                <td>{{ product.Mercury_YN }} <br> {{ product.AXRegDate|date:"y.m.d" }}</td>
+                <td>{{ product.AXProdCode }} <br> {{ product.AXProdName }}</td>
+                <td>{{ product.get_ProdStatus_display }}</td>
+                <td>{{ product.Basic_coprice|intcomma }}<br>{{ product.Basic_price|intcomma }}<br>{{ product.Margin }} %</td>
+                <td>{{ product.Inventory_YN }}</td>
+                <td>{{ product.Remark|linebreaksbr }}</td>
+                <td>
+                    {% if product.ProdDiv == 'DT' %}
+                    <table class="table table-striped">
+                        <thread>
+                            <tr align="center">
+                                <td><B>구분</B></td>
+                                <td><B>CPU</B></td>
+                                <td><B>RAM</B></td>
+                                <td><B>HDD</B></td>
+                                <td><B>SSD</B></td>
+                                <td><B>G.C</B></td>
+                                <td><B>파워</B></td>
+                                <td><B>키</B></td>
+                                <td><B>마</B></td>
+                            </tr>
+                        </thread>
+                        <tbody>
+                            <tr align="center">
+                                <td>{{ product.get_DTType_display }}</td>
+                                <td>{{ product.get_DTCPU_display }}-{{ product.DTCPUDetail }}</td>
+                                <td>{{ product.get_DTRAM_display }}</td>
+                                <td>{{ product.get_DTHDD_display }}</td>
+                                <td>{{ product.get_DTSSD_display }}</td>
+                                <td>{{ product.DTGraphicCard }}</td>
+                                <td>{{ product.DTPower }} W</td>
+                                <td>{% if product.Keyboard_YN == True %}Y{% else %}N{% endif %}</td>
+                                <td>{% if product.DTMouse_YN == True %}Y{% else %}N{% endif %}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    {% elif product.ProdDiv == 'MT' %}
+                    <table class="table table-striped">
+                        <thread>
+                            <tr align="center">
+                                <td><B>구분</B></td>
+                                <td><B>사이즈</B></td>
+                                <td><B>비율</B></td>
+                                <td><B>해상도</B></td>
+                                <td><B>패널</B></td>
+                                <td><B>응답속도</B></td>
+                                <td><B>명암비</B></td>
+                            </tr>
+                        </thread>
+                        <tbody>
+                            <tr align="center">
+                                <td>{{product.get_MTType_display }}</td>
+                                <td>{{ product.MTScreenSize|floatformat:1 }} "</td>
+                                <td>{{ product.get_Ratio_display }}</td>
+                                <td>{{ product.get_Resolution_display }}</td>
+                                <td>{{ product.get_Panel_display }}</td>
+                                <td>{{ product.ReqSpeed }} ms</td>
+                                <td>{{ product.get_BWRatio_display }} </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    {% elif product.ProdDiv == 'NT' %}
+                    <table class="table table-striped">
+                        <thread>
+                            <tr align="center">
+                                <td><B>구분</B></td>
+                                <td><B>사이즈</B></td>
+                                <td><B>CPU</B></td>
+                                <td><B>RAM</B></td>
+                                <td><B>HDD</B></td>
+                                <td><B>SSD</B></td>
+                                <td><B>무게</B></td>
+                                <td><B>파우치</B></td>
+                                <td><B>가방</B></td>
+                            </tr>
+                        </thread>
+                        <tbody>
+                            <tr align="center">
+                                <td>{{ product.get_NTType_display }}</td>
+                                <td>{{ product.NTScreenSize|floatformat:1 }} "</td>
+                                <td>{{ product.get_NTCPU_display }}</td>
+                                <td>{{ product.get_NTRAM_display }}</td>
+                                <td>{{ product.get_NTHDD_display }}</td>
+                                <td>{{ product.get_NTSSD_display }}</td>
+                                <td>{{ product.NTWeight }} kg</td>
+                                <td>{% if product.Keyboard_YN == True %}Y{% else %}N{% endif %}</td>
+                                <td>{% if product.NTMouse_YN == True %}Y{% else %}N{% endif %}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    {% elif product.ProdDiv == 'SR' %}
+                    <table class="table table-striped">
+                        <thread>
+                            <tr align="center">
+                                <td><B>투입폭</B></td>
+                                <td><B>최대매수</B></td>
+                                <td><B>용량</B></td>
+                                <td><B>소비전력</B></td>
+                                <td><B>기타</B></td>
+                            </tr>
+                        </thread>
+                        <tbody>
+                            <tr align="center">
+                                <td>{{ product.SRInputWidth }}</td>
+                                <td>{{ product.SRCuttingSize }} "</td>
+                                <td>{{ product.SRCapacity }}</td>
+                                <td>{{ product.SRPowerCon }}</td>
+                                <td>{{ product.SRRemark }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    {% elif product.ProdDiv == 'ETC' %}
+                    <table class="table table-striped">
+                        <thread>
+                            <tr align="center">
+                                <td><B>사양1</B></td>
+                                <td><B>사양2</B></td>
+                                <td><B>사양3</B></td>
+                            </tr>
+                        </thread>
+                        <tbody>
+                            <tr align="left">
+                                <td>{{ product.ETCRemark1 }}</td>
+                                <td>{{ product.ETCRemark2 }}</td>
+                                <td>{{ product.ETCRemark3 }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    {% endif %}
+                </td>
+
+            </tr>
+
+            {% endfor %}
+        </tbody>
+    </table>
+    <!--table>
+        <tr>
+            <td>벤더코드 : </td>
+            <td>
+                {{form.id}}
+                {{form.VendorCode.help_text}}
+            </td>
+        </tr>
+    </table>
+    <table>
+         {% for Vendor in object_list %}
+            <li><{{ Vendor.id }}</a></li>
+        {% endfor %}
+    </table>
+
+{% endblock content %}
+

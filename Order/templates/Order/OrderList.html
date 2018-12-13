@@ -1,0 +1,132 @@
+{% extends "base_Product.html" %}
+
+{% load humanize %}
+
+{% block content %}
+<ul>
+    <h1><B>발주 및 배송 정보 관리</B></h1>
+    <!--li><a href="#" onclick="javascript:window.open('/Order/offernew','popup','scrollbars=no, resizable=no width=1200,height=600')">New</a></li-->
+</ul>
+
+    <table class="table table-striped">
+         <thread>
+            <tr align="center">
+                <td><B>ID</B></td>
+                <td><B>제안번호</B></td>
+                <td><B>발주일자<br>마감년월</B></td>
+                <td><B>요청부서<br>요청사원</B></td>
+                <td><B>거래처명</B></td>
+                <td><B>PO/전자결재/<br>판매품의번호</B></td>
+                <td><B>Action</B></td>
+                <td><B>발주상품</B></td>
+            </tr>
+
+        </thread>
+        <tbody>
+            {% for orderlist in orderlist %}
+            <tr align="center">
+                <td>{{ orderlist.id }}</td>
+                <td>{{ orderlist.OfferNo }}<br>
+                    {{ orderlist.OriginOfferNo }}</a></td>
+                <td>{{ orderlist.OrderDate|date:"y.m.d" }}<br>
+                    ( {{ orderlist.ClosingDate|date:"y.m" }} )<br>
+
+                </td>
+                <td>{{ orderlist.ReqNo.DeptCode }}<br>{{ orderlist.ReqNo.EmpNo }}</td>
+                <td>{{ orderlist.ReqNo.Custname }}<br>
+                    {% if orderlist.ReqNo.Rental_YN == True %}
+                        ({{ orderlist.ReqNo.RPCustname }})
+                    {% endif %}
+                </td>
+                <td>{{ orderlist.PONumber }}<br>{{ orderlist.SignNumber }}<br>{{ orderlist.PZNumber }}
+
+                </td>
+                <td>
+                    <button type ="button" onclick="window.open('/Order/orderaddinfo/{{ orderlist.id }}',
+                    'OfferPrint','width=500,height=400, top=500, left= 500,location=no, status=no, scrollbars=yes');"><font size = '2'>
+                    <b>Add info</b></font></button><br><br>
+                    <button type ="button" onclick="window.open('/Order/orderinvoice/{{ orderlist.id }}',
+                    'OfferPrint','width=600,height=800, location=no, status=no, scrollbars=yes');"><font size = '2'>
+                    <b>invoice</b></font></button>
+                </td>
+                <td>
+                    <table class="table table-striped">
+                        <thread>
+                            <tr align="center">
+                                <!--td><B>구분</B></td-->
+                                <td><B>매입사</B></td>
+                                <td><B>상품명</B></td>
+                                <td><B>수량</B></td>
+                                <td><B>매입가</B></td>
+                                <td><B>매입가계</B></td>
+                                <td><B>매출가</B></td>
+                                <td><B>매출가계</B></td>
+                                <td><B>매출이익률</B></td>
+                                <td><B>배송정보</B></td>
+                                <td><B>배송일자</B></td>
+                                <td><B>Action</B></td>
+                            </tr>
+                        </thread>
+                    {% for orderlistdetail in orderlist.Offer_No.all %}
+                        <tbody>
+                            <tr align="center">
+                                <!--td>{{ offerpricedetail.id }}</td-->
+                                <td>{{ orderlistdetail.ProdCode.VendorCode }}</td>
+                                <td>{{ orderlistdetail.ProdCode.ProdName }}</td>
+                                <td>{{ orderlistdetail.Qty }}</td>
+                                <td>{{ orderlistdetail.CoPrice|intcomma }}</td>
+                                <td>{{ orderlistdetail.CoPriceSum|intcomma }}</td>
+                                <td>{{ orderlistdetail.OfferPrice|intcomma }}</td>
+                                <td>{{ orderlistdetail.OfferPriceSum|intcomma }}</td>
+                                <td>{{ orderlistdetail.Margin }} %</td>
+                                <td>
+                                    {% if orderlistdetail.LogiType != 'L' %}
+                                    {{ orderlistdetail.get_LogiType_display }}
+                                    {% endif %}
+                                    {% if orderlistdetail.LogiType == 'L' %}
+                                    {{ orderlistdetail.get_LogiCompany_display }}
+                                    ( {{ orderlistdetail.LogiNo }} )
+                                    {% endif %}
+                                </td>
+                                <td>{{ orderlistdetail.DeliveryDate|date:"y.m.d" }}</td>
+                                <td><button type ="button" onclick="window.open('/Order/orderdetailaddinfo/{{ orderlistdetail.id }}',
+                                'OfferPrint','width=500,height=400, top=500, left= 500,location=no, status=no, scrollbars=yes');"><font size = '2'>
+                                <b>Add info</b></font></button></td>
+                            </tr>
+                        </tbody>
+                    {% endfor %}
+                        <tbody>
+                            <tr align="center">
+                                <td>합 계</td>
+                                <td> </td>
+                                <td>{{ orderlist.qtytotal|intcomma }}</td>
+                                <td> </td>
+                                <td>{{ orderlist.copricetotal|intcomma }}</td>
+                                <td> </td>
+                                <td>{{ orderlist.offerpricetotal|intcomma }}</td>
+                                <td>{{ orderlist.totalmargin|floatformat:2 }} %</td>
+                            </tr>
+                        </tbody>
+                        </table>
+                </td>
+                <!--td>
+                    <button type ="button" onclick="window.open('/Order/offerprint/{{ offerprice.id }}',
+                    'OfferPrint','width=1000,height=600, location=no, status=no, scrollbars=yes');"><font size = '2'>
+                    <b>Print</b></font></button>
+                    <button type ="button" onclick="window.open('/Order/offerorder/{{ offerprice.id }}','OrderNew','width=1000,height=600, location=no, status=no, scrollbars=yes');"><font size = '2'><b>Order</b></font></button>
+                </td-->
+                <!--{% for offerpriceqtytotal in offerprice.choices.all %}
+                {% endfor %}-->
+                <!--td>{{ inventory.id }}</td>
+                <td>{{ inventory.Prodcode }}</td>
+                <td>{{ inventory.Prodcode.VendorCode }}</td>
+                <td>{{ inventory.InvenDate|date:"y.m.d" }}</td>
+                <td>{{ inventory.InvenQty }}</td-->
+            </tr>
+
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock content %}
+

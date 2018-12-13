@@ -1,0 +1,48 @@
+{% extends "base_MST.html" %}
+
+{% block content %}
+<ul>
+    <h1><B>부서 관리</B></h1>
+    <li><a href="#" onclick="javascript:window.open('/admin/MST/codept/add','popup','scrollbars=no, resizable=no width=800,height=600')">New</a></li>
+</ul>
+
+    <table class="table table-striped">
+        <thread>
+            <tr>
+                <td><B>ID</B></td>
+                <td><B>부서코드</B></td>
+                <td><B>부서명</B></td>
+
+            </tr>
+
+        </thread>
+        <tbody>
+            {% for dept in dept %}
+            <tr>
+                <td>{{ dept.id }}</td>
+                <td><a href="#" onclick="javascript:window.open('{{ base_dir }}/admin/MST/codept/{{ dept.id }}/change/'
+                ,'popup','scrollbars=no, resizable=no width=800,height=600')">{{ dept.DeptCode }}</a></td>
+                <td>{{ dept.DeptName }}</td>
+
+            </tr>
+
+            {% endfor %}
+        </tbody>
+    </table>
+    <!--table>
+        <tr>
+            <td>벤더코드 : </td>
+            <td>
+                {{form.id}}
+                {{form.VendorCode.help_text}}
+            </td>
+        </tr>
+    </table>
+    <table>
+         {% for Vendor in object_list %}
+            <li><{{ Vendor.id }}</a></li>
+        {% endfor %}
+    </table-->
+
+{% endblock content %}
+

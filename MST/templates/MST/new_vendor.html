@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style type="text/css">
+        form {
+            margin : 0 0;
+            width : 450px;
+
+            padding : 1em;
+            border : 1px solid #CCC;
+            border-radius: 0.5em;
+            background-color : #f2f2f2;
+        }
+        form div + div, form div + button, form div + details, form details + div {
+            margin-top : 1em;
+        }
+        label {
+            display : inline-block;
+            width : 100px;
+            text-align : right;
+        }
+
+        input, textarea, button, select {
+            font : 1em sans-serif;
+
+            width : 300px;
+            -moz-box-sizing : border-box;
+            box-sizing : border-box;
+
+            border : 1px solid #999;
+         }
+
+         input:focus, textarea:focus {
+            border-color : #000;
+         }
+
+        button[type=submit] {
+            width : 100%;
+            background-color: orange;
+            color: white;
+            padding: white;
+            martgin : 8px, 0;
+            border : none;
+            border-radius : 4px;
+            cursor: pointer;
+        }
+        button[type=submit]:hover {
+            background-color : OrangeRed;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>매입사 등록</title>
+
+</head>
+<body>
+    <h3><B>매입사 등록</B></h3>
+
+    <div>
+        <form method="POST">
+            {% csrf_token %}
+            <div>
+                {{ form.message.error }}
+                <label for="id_Company_Name">벤더명 : </label>
+                {{ form.CompanyName }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_Chief">대표자명 : </label>
+                {{ form.Chief }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_ComNumber">사업자번호 : </label>
+                {{ form.ComNumber }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_Address">주소 : </label>
+                {{ form.Address }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_ComTel">연락처 : </label>
+                {{ form.ComTel }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_Brand">취급브랜드 : </label>
+                {{ form.Brand }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_Major_YN">주요매입사 : </label>
+                {{ form.Major_YN }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_ContactName1">담당자 : </label>
+                {{ form.ContactName1 }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_ContactTel1">연락처 : </label>
+                {{ form.ContactTel1 }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_ContactCTel1">핸드폰 : </label>
+                {{ form.ContactCTel1}}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_ContactMai1">이메일 : </label>
+                {{ form.ContactMail1}}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_Status">상태 : </label>
+                {{ form.Status}}
+            </div>
+            <details>
+                <summary>추가 담당자</summary>
+                <p>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_ContactName2">담당자2 : </label>
+                        {{ form.ContactName2 }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_ContactTel2">연락처2 : </label>
+                        {{ form.ContactTel2 }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_ContactCTel2">핸드폰2 : </label>
+                        {{ form.ContactCTel2}}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_ContactMail2">이메일2 : </label>
+                        {{ form.ContactMail2}}
+                    </div>
+                </p>
+            </details>
+            <div>
+                {{ form.message.error }}
+                <label for="id_AccountNo">계좌번호 : </label>
+                {{ form.AccountNo }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_PaymentMethod">지불방법 : </label>
+                {{ form.PaymentMethod }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_PaymentPeriod">지불조건 : </label>
+                {{ form.PaymentPeriod }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_Contract_YN">계약체결여부 : </label>
+                {{ form.Contract_YN }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_ContractDate">체결일자 : </label>
+                {{ form.ContractDate }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_Remark">기타 : </label>
+                {{ form.Remark }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_ComPaper">사업자등록증 : </label>
+                {{ form.ComPaper}}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_ComPaper">통장사본 : </label>
+                {{ form.AccountPaper }}
+            </div>
+            <button type="submit" value="Submit">저장</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load humanize %}
+<head>
+    <script type ="text/javascript">
+        function setcoprice(value)
+        {
+            document.getElementById("CoPrice").value = value;
+         }
+    </script>
+    <style type="text/css">
+        form {
+            margin : 0 0;
+            width : 500px;
+
+            padding : 1em;
+            border : 1px solid #CCC;
+            border-radius: 0.5em;
+            background-color : #f2f2f2;
+        }
+        form div + div, form div + button, form div + details, form details + div {
+            margin-top : 1em;
+        }
+        label {
+            display : inline-block;
+            width : 100px;
+            text-align : right;
+        }
+
+        input, textarea, button, select {
+            font : 1em sans-serif;
+
+            width : 300px;
+            -moz-box-sizing : border-box;
+            box-sizing : border-box;
+
+            border : 1px solid #999;
+         }
+
+         input:focus, textarea:focus {
+            border-color : #000;
+         }
+
+        button[type=submit] {
+            width : 100%;
+            background-color: orange;
+            color: white;
+            padding: white;
+            martgin : 8px, 0;
+            border : none;
+            border-radius : 4px;
+            cursor: pointer;
+        }
+        button[type=submit]:hover {
+            background-color : OrangeRed;
+        }
+
+        .itemdetail input {
+            font : 1em sans-serif;
+
+            width : 50px;
+            -moz-box-sizing : border-box;
+            box-sizing : border-box;
+
+            border : 1px solid #999;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-color: #ccc;
+            font-size: 13px;
+            font-family: "Roboto","Lucida Grande","DejaVu Sans","Bitstream Vera Sans",Verdana,Arial,sans-serif;
+            color: #333;
+        }
+
+        th, td {
+            border-bottom: .5px solid #444444;
+            padding: 5px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>상품 추가</title>
+
+</head>
+
+<body>
+    <h3><B>상품 추가</B></h3>
+    {% for prodinfo in prodinfo %}
+    <div>
+        <form method="POST">
+            {% csrf_token %}
+            <div>
+                {{ form.message.error }}
+                <label for="id_OfferNo">제안번호 : </label>
+                {{ form.OfferNo }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_ProdCode">상품명 : </label>
+                {{ form.ProdCode }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_QTY">수량 : </label>
+                {{ form.Qty }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_CoPrice">매입가 : </label>
+                {{ form.CoPrice }}
+                {{ prodinfo.Basic_coprice|intcomma }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_OfferPrice">매출가 : </label>
+                {{ form.OfferPrice }}
+                {{ prodinfo.Basic_price|intcomma }}
+            </div>
+            <button type="submit" value="Submit">저장</button>
+        </form>
+    </div>
+
+    <h3>견적 이력</h3>
+    <table class="table table-striped">
+         <thread>
+            <tr align="center">
+                <td><B>제안번호</B></td>
+                <td><B>제안일자</B></td>
+                <td><B>거래처명</B></td>
+                <td><B>제안결과</B></td>
+                <td><B>수량</B></td>
+                <td><B>매입가</B></td>
+                <td><B>매입합계</B></td>
+                <td><B>매출가</B></td>
+                <td><B>매출합계</B></td>
+                <td><B>마진율</B></td>
+            </tr>
+
+        </thread>
+        <tbody>
+         {% for offerprice in offerprice %}
+            {% for offerpricedetail in offerprice.Offer_No.all %}
+                {% if prodinfo.pk == offerpricedetail.ProdCode.pk %}
+                 <tr align="center">
+                     <td>{{ offerprice.OfferNo }}</td>
+                     <td>{{ offerprice.OfferDate|date:"y.m.d" }}</td>
+                     <td>{{ offerprice.ReqNo.Custname }}</td>
+                     <td>{{ offerprice.get_OfferResult_display }}</td>
+                     <td>{{ offerpricedetail.Qty }}</td>
+                     <td>{{ offerpricedetail.CoPrice|intcomma }}</td>
+                     <td>{{ offerpricedetail.CoPriceSum|intcomma }}</td>
+                     <td>{{ offerpricedetail.OfferPrice|intcomma }}</td>
+                     <td>{{ offerpricedetail.OfferPriceSum|intcomma }}</td>
+                     <td>{{ offerpricedetail.Margin }}%</td>
+
+                 </tr>
+                {% endif %}
+            {% endfor %}
+         {% endfor %}
+        </tbody>
+    </table>
+    {% endfor %}
+</body>
+</html>

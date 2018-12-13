@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type ="text/javascript">
+        function toggle_div(id)
+        {
+            document.getElementById('DT').style.display = 'none';
+            document.getElementById('MT').style.display = 'none';
+            document.getElementById('NT').style.display = 'none';
+            document.getElementById('SR').style.display = 'none';
+            document.getElementById('ETC').style.display = 'none';
+            document.getElementById(id).style.display = 'block';
+         }
+    </script>
+    <style type="text/css">
+        form {
+            margin : 0 0;
+            width : 450px;
+
+            padding : 1em;
+            border : 1px solid #CCC;
+            border-radius: 0.5em;
+            background-color : #f2f2f2;
+        }
+        form div + div, form div + button, form div + details, form details + div {
+            margin-top : 1em;
+        }
+        label {
+            display : inline-block;
+            width : 100px;
+            text-align : right;
+        }
+
+        input, textarea, button, select {
+            font : 1em sans-serif;
+
+            width : 300px;
+            -moz-box-sizing : border-box;
+            box-sizing : border-box;
+
+            border : 1px solid #999;
+         }
+
+         input:focus, textarea:focus {
+            border-color : #000;
+         }
+
+        button[type=submit] {
+            width : 100%;
+            background-color: orange;
+            color: white;
+            padding: white;
+            martgin : 8px, 0;
+            border : none;
+            border-radius : 4px;
+            cursor: pointer;
+        }
+        button[type=submit]:hover {
+            background-color : OrangeRed;
+        }
+
+        #DT, #MT, #NT, #SR, #ETC {
+            display: none;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>상품 등록</title>
+
+</head>
+
+<body>
+    <h3><B>상품 등록</B></h3>
+
+    <div>
+        <form method="POST">
+            {% csrf_token %}
+            <div>
+                {{ form.message.error }}
+                <label for="id_ProdDiv">구분 : </label>
+                {{ form.ProdDiv }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_ProdName">상품명 : </label>
+                {{ form.ProdName }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_ProdBrand">브랜드 : </label>
+                {{ form.ProdBrand }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_VendorCode">매입사 : </label>
+                {{ form.VendorCode }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_Mercury_YN">AX등록여부 : </label>
+                {{ form.Mercury_YN }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_AXProdCode">AX물품코드 : </label>
+                {{ form.AXProdCode }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_AXProdName">AX물품명 : </label>
+                {{ form.AXProdName }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_AXRegDate">AX등록일자 : </label>
+                {{ form.AXRegDate }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_ProdStatus">상태 : </label>
+                {{ form.ProdStatus }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_Basic_coprice">매입가 : </label>
+                {{ form.Basic_coprice}}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_Basic_price">매출가 : </label>
+                {{ form.Basic_price}}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_Inventory_YN">재고운영여부 : </label>
+                {{ form.Inventory_YN}}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_Remark">기타 : </label>
+                {{ form.Remark}}
+            </div>
+            <div id = "DetailDiv">세부 사양 등록</div>
+                <div id = "DT">
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_DTType">- 구분 : </label>
+                        {{ form.DTType }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_DTCPU">- CPU : </label>
+                        {{ form.DTCPU }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_DTCPUDetail">- CPU상세 : </label>
+                        {{ form.DTCPUDetail }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_DTRAM">- RAM : </label>
+                        {{ form.DTRAM }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_DTHDD">- HDD : </label>
+                        {{ form.DTHDD }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_DTSSD">- SSD : </label>
+                        {{ form.DTSSD }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_DTGraphicCard">- 그래픽 : </label>
+                        {{ form.DTGraphicCard }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_DTPower">- 파워 : </label>
+                        {{ form.DTPower }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_Keyboard_YN">- 키보드 : </label>
+                        {{ form.Keyboard_YN }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_DTMouse_YN">- 마우스 : </label>
+                        {{ form.DTMouse_YN }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_DTIORemark">- 입출력단자 : </label>
+                        {{ form.DTIORemark }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_DTWeight">- 무게 : </label>
+                        {{ form.DTWeight }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_DTRemark">- 기타사양 : </label>
+                        {{ form.DTRemark }}
+                    </div>
+                </div>
+                <div id = "MT">
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_MTType">- 구분 : </label>
+                        {{ form.MTType }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_MTScreenSize">- 스크린 : </label>
+                        {{ form.MTScreenSize }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_Ratio">- 화면비 : </label>
+                        {{ form.Ratio }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_Resolution">- 해상도 : </label>
+                        {{ form.Resolution }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_Panel">- 패널 : </label>
+                        {{ form.Panel }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_ReqSpeed">- 응답속도 : </label>
+                        {{ form.ReqSpeed }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_BWRatio">- 명암비 : </label>
+                        {{ form.BWRatio }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_MTIORemark">- 입출력단자 : </label>
+                        {{ form.MTIORemark }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_MTWeight">- 무게 : </label>
+                        {{ form.MTWeight }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_MTRemark">- 기타사양 : </label>
+                        {{ form.MTRemark }}
+                    </div>
+                </div>
+                <div id = "NT">
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_NTType">- 구분 : </label>
+                        {{ form.NTType }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_NTScreenSize">- 스크린 : </label>
+                        {{ form.NTScreenSize }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_NTCPU">- CPU : </label>
+                        {{ form.NTCPU }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_NTCPUDetail">- CPU상세 : </label>
+                        {{ form.NTCPUDetail }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_NTRAM">- RAM : </label>
+                        {{ form.NTRAM }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_NTHDD">- HDD : </label>
+                        {{ form.NTHDD }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_NTSSD">- SSD : </label>
+                        {{ form.NTSSD }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_NTGraphicCard">- 그래픽카드 : </label>
+                        {{ form.NTGraphicCard }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_NTMouse_YN">- 마우스유무 : </label>
+                        {{ form.NTMouse_YN }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_NTPouch_YN">- 파우치유무 : </label>
+                        {{ form.NTPouch_YN }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_NTIORemark">- 입출력단자 : </label>
+                        {{ form.NTIORemark }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_NTWeight">- 무게 : </label>
+                        {{ form.NTWeight }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_NTRemark">- 기타사양 : </label>
+                        {{ form.ETCRemark1 }}
+                    </div>
+                </div>
+                <div id = "SR">
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_SRInputWidth">- 투입폭 : </label>
+                        {{ form.SRInputWidth }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_SRCuttingSize">- 최대매수 : </label>
+                        {{ form.SRCuttingSize }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_SRCapacity">- 용량 : </label>
+                        {{ form.SRCapacity }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_SRPowerCon">- 소비전력 : </label>
+                        {{ form.SRPowerCon }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_SRWeight">- 무게 : </label>
+                        {{ form.SRWeight}}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_SRRemark">- 기타사양 : </label>
+                        {{ form.SRRemark }}
+                    </div>
+                </div>
+                <div id = "ETC">
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_ETCRemark1">- 사양1 : </label>
+                        {{ form.ETCRemark1 }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_ETCRemark2">- 사양2 : </label>
+                        {{ form.ETCRemark1 }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_ETCRemark3">- 사양3 : </label>
+                        {{ form.ETCRemark1 }}
+                    </div>
+                </div>
+            <button type="submit" value="Submit">저장</button>
+        </form>
+    </div>
+</body>
+</html>

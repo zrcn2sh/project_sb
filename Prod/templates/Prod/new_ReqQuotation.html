@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--script type ="text/javascript">
+        function toggle_div(id)
+        {
+            document.getElementById('DT').style.display = 'none';
+            document.getElementById('MT').style.display = 'none';
+            document.getElementById('NT').style.display = 'none';
+            document.getElementById('SR').style.display = 'none';
+            document.getElementById('ETC').style.display = 'none';
+            document.getElementById(id).style.display = 'block';
+         }
+    </script-->
+    <style type="text/css">
+        form {
+            margin : 0 0;
+            width : 450px;
+
+            padding : 1em;
+            border : 1px solid #CCC;
+            border-radius: 0.5em;
+            background-color : #f2f2f2;
+        }
+        form div + div, form div + button, form div + details, form details + div {
+            margin-top : 1em;
+        }
+        label {
+            display : inline-block;
+            width : 100px;
+            text-align : right;
+        }
+
+        input, textarea, button, select {
+            font : 1em sans-serif;
+
+            width : 300px;
+            -moz-box-sizing : border-box;
+            box-sizing : border-box;
+
+            border : 1px solid #999;
+         }
+
+         input:focus, textarea:focus {
+            border-color : #000;
+         }
+
+        button[type=submit] {
+            width : 100%;
+            background-color: orange;
+            color: white;
+            padding: white;
+            martgin : 8px, 0;
+            border : none;
+            border-radius : 4px;
+            cursor: pointer;
+        }
+        button[type=submit]:hover {
+            background-color : OrangeRed;
+        }
+
+        #DT, #MT, #NT, #SR, #ETC {
+            display: none;
+        }
+
+        #none {
+            display:none;
+            }
+    </style>
+    <meta charset="UTF-8">
+    <title>견적 요청 등록</title>
+
+</head>
+
+<body>
+    <h3><B>견적 요청 등록</B></h3>
+
+    <div>
+        <form method="POST">
+            {% csrf_token %}
+            <div>
+                {{ form.message.error }}
+                <label for="id_ReqNo">요청번호 : </label>
+                {{ form.ReqNo }}
+            </div>
+            <div id="none">
+                {{ form.message.error }}
+                <label for="id_OriginReqNo">원요청번호 : </label>
+                {{ form.OriginReqNo }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_DeptCode">부서명 : </label>
+                {{ form.DeptCode }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_EmpNo">사원명 : </label>
+                {{ form.EmpNo }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_Custname">고객명 : </label>
+                {{ form.Custname }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_RPCustname">파트너/렌탈사 : </label>
+                {{ form.RPCustname }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_Rental_YN">렌탈여부 : </label>
+                {{ form.Rental_YN }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_Bid_YN">입찰여부 : </label>
+                {{ form.Bid_YN }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_ReqProd">요청사항 : </label>
+                {{ form.ReqProd }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_Remark">기타사항 : </label>
+                {{ form.Remark }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_CanonETC">캐논매출현황 : </label>
+                {{ form.CanonETC }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_ShipDT">납품예상일자 : </label>
+                {{ form.ShipDT }}
+            </div>
+            <!-- 관리자 입력창 -->
+            <div>
+                {{ form.message.error }}
+                <label for="id_ReqVendor1">요청매입사1 : </label>
+                {{ form.ReqVendor1 }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_ReqVendor2">요청매입사2 : </label>
+                {{ form.ReqVendor2 }}
+            </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_ReqVendor3">요청매입사3 : </label>
+                {{ form.ReqVendor3 }}
+            </div>
+            <button type="submit" value="Submit">저장</button>
+        </form>
+    </div>
+</body>
+</html>
