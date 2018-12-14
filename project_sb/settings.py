@@ -127,6 +127,7 @@ SESSION_COOKIE_AGE = 60000
 
 LOGIN_URL = '/login'
 LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/login'
 
 #parent_dir = os.path.abspath(os.path.dirname(__file__) + '/..')
 #MEDIA_ROOT = os.path.join(parent_dir, 'media/')

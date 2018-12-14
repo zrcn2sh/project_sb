@@ -24,6 +24,7 @@ from Order import views as viewsOrder
 
 urlpatterns = (
     url(r'^$', viewsMST.signin, name='login'),
+    url(r'^logout/',auth_views.LogoutView.as_view(), name='logout'),
     url(r'^admin/', admin.site.urls),
     url(r'^books/', include('books.urls', namespace="books")),
 
