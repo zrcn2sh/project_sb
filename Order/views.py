@@ -47,7 +47,7 @@ def OfferNew(request, pk):
     else:
         form = OfferForm(initial={'ReqNo':pk})
 
-    return render(request, 'Order/new_offer.html', {'form':form})
+    return render(request, 'Order/new_Offer.html', {'form':form})
 
 @login_required
 def OfferEdit(request, pk):
