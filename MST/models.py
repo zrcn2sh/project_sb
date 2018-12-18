@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from project_sb.global_variables import *
+from django.utils import timezone
 
 # Create your models here.
 
@@ -92,6 +93,33 @@ class CoEmp(models.Model):
 
     def __str__(self):
         return self.EmpName
+
+class CoDevBoard(models.Model):
+    MenuDiv = models.CharField(max_length=20, choices=DevBBSMenuDiv_enumtype)
+    MenuName = models.CharField(max_length=50)
+    RequestName = models.CharField(max_length=50)
+    RequestDetail = models.TextField()
+    ReqUser = models.ForeignKey('CoUser', on_delete=models.CASCADE, related_name='CoEmp_ReqUser')
+    ReqDate = models.DateField(default=timezone.now)
+    Status = models.CharField(max_length=10, choices=DevBBSStatus_enumtype)
+    Priority = models.CharField(max_length=5, choices=DevPriority_enumtype)
+    Difficulty = models.CharField(max_length=5, choices=DevDifficulty_enumtype)
+    RegDate = models.DateField(auto_now_add=True)
+    UpdateDate = models.DateField(auto_now=True)
+
+    def __str__(self):
+        return self.RequestName
+
+class CoDevBoardReply(models.Model):
+    CoDevBoard = models.ForeignKey('CoDevBoard', on_delete=models.CASCADE, related_name='CoDevBoardReply_Board')
+    ReplyDetail = models.TextField()
+    RegUser = models.ForeignKey('CoUser', on_delete=models.CASCADE, related_name='CoDevBoardReply_RegUser')
+    RegDate = models.DateField(auto_now_add=True)
+    Version = models.CharField(max_length=20, blank=True, null=True)
+
+    def __str__(self):
+        return self.CoDevBoard
+
 
 
 

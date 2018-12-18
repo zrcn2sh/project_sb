@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5d6ba2a8-3236-4e68-b494-3bfd2c7f4243" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Order/templates/Order/OrderList.html" beforeDir="false" afterPath="$PROJECT_DIR$/Order/templates/Order/OrderList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MST/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/MST/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project_sb/global_variables.py" beforeDir="false" afterPath="$PROJECT_DIR$/project_sb/global_variables.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,15 +15,44 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MST/tests.py">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/Order/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1867">
+              <caret line="53" column="47" selection-start-line="53" selection-start-column="47" selection-end-line="53" selection-end-column="47" />
+              <folding>
+                <element signature="e#0#54#0" expanded="true" />
+                <marker date="1544748530087" expanded="true" signature="3178:3180" ph="..." />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Order/templates/Order/OrderDetailAddInfo.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="82" column="40" lean-forward="true" selection-start-line="82" selection-start-column="40" selection-end-line="82" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Order/forms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="326">
+              <caret line="58" column="90" selection-start-line="58" selection-start-column="78" selection-end-line="58" selection-end-column="90" />
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
-              <caret line="109" column="8" lean-forward="true" selection-start-line="109" selection-start-column="8" selection-end-line="109" selection-end-column="8" />
+            <state relative-caret-position="121">
+              <caret line="50" column="45" lean-forward="true" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -31,10 +60,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MST/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="55" column="139" lean-forward="true" selection-start-line="55" selection-start-column="139" selection-end-line="55" selection-end-column="139" />
+            <state relative-caret-position="387">
+              <caret line="119" column="22" lean-forward="true" selection-start-line="119" selection-start-column="22" selection-end-line="119" selection-end-column="22" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Order/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" selection-start-line="3" selection-end-line="4" selection-end-column="41" />
+              <folding>
+                <marker date="1545117243738" expanded="true" signature="4825:4926" ph="..." />
               </folding>
             </state>
           </provider>
@@ -58,11 +99,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/project_sb/global_variables.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
-              <caret line="181" column="1" lean-forward="true" selection-start-line="181" selection-start-column="1" selection-end-line="181" selection-end-column="1" />
+            <state relative-caret-position="492">
+              <caret line="226" column="14" lean-forward="true" selection-start-line="226" selection-start-column="14" selection-end-line="226" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -104,6 +145,11 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="q" />
+      </list>
+    </option>
     <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -131,14 +177,12 @@
         <option value="$PROJECT_DIR$/Prod/models.py" />
         <option value="$PROJECT_DIR$/Order/templates/Prod/templates/Prod/new_ReqQuotation.html" />
         <option value="$PROJECT_DIR$/Order/templates/Order/SetPriceProd.html" />
-        <option value="$PROJECT_DIR$/MST/models.py" />
         <option value="$PROJECT_DIR$/Order/templates/Order/OfferPrint.html" />
         <option value="$PROJECT_DIR$/Order/templates/Order/OfferOrder.html" />
         <option value="$PROJECT_DIR$/Prod/templates/Prod/SendMail.html" />
         <option value="$PROJECT_DIR$/Order/filters.py" />
         <option value="$PROJECT_DIR$/Order/templates/Order/OrderClosingDate.html" />
         <option value="$PROJECT_DIR$/Order/templates/Order/OrderAddInfo.html" />
-        <option value="$PROJECT_DIR$/Order/templates/Order/OrderDetailAddInfo.html" />
         <option value="$PROJECT_DIR$/Prod/templates/Prod/new_ReqQuotation.html" />
         <option value="$PROJECT_DIR$/Prod/views.py" />
         <option value="$PROJECT_DIR$/Prod/templates/Prod/SearchProdOffer.html" />
@@ -146,10 +190,7 @@
         <option value="$PROJECT_DIR$/Prod/templates/Prod/ReqQuo.html" />
         <option value="$PROJECT_DIR$/Order/templates/Order/offerdetail.html" />
         <option value="$PROJECT_DIR$/Order/admin.py" />
-        <option value="$PROJECT_DIR$/project_sb/global_variables.py" />
         <option value="$PROJECT_DIR$/Order/templates/Order/new_Rental.html" />
-        <option value="$PROJECT_DIR$/Order/forms.py" />
-        <option value="$PROJECT_DIR$/Order/models.py" />
         <option value="$PROJECT_DIR$/Order/templates/Order/Rental.html" />
         <option value="$PROJECT_DIR$/Order/templates/Order/Order.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
@@ -161,6 +202,11 @@
         <option value="$PROJECT_DIR$/project_sb/settings.py" />
         <option value="$PROJECT_DIR$/Order/templates/Order/OrderList.html" />
         <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/Order/models.py" />
+        <option value="$PROJECT_DIR$/Order/forms.py" />
+        <option value="$PROJECT_DIR$/Order/templates/Order/OrderDetailAddInfo.html" />
+        <option value="$PROJECT_DIR$/MST/models.py" />
+        <option value="$PROJECT_DIR$/project_sb/global_variables.py" />
       </list>
     </option>
   </component>
@@ -185,25 +231,12 @@
             <path>
               <item name="project_sb" type="b2602c69:ProjectViewProjectNode" />
               <item name="project_sb" type="462c0819:PsiDirectoryNode" />
-              <item name="Order" type="462c0819:PsiDirectoryNode" />
+              <item name="MST" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="project_sb" type="b2602c69:ProjectViewProjectNode" />
               <item name="project_sb" type="462c0819:PsiDirectoryNode" />
               <item name="Order" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project_sb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project_sb" type="462c0819:PsiDirectoryNode" />
-              <item name="Order" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="Order" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project_sb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project_sb" type="462c0819:PsiDirectoryNode" />
-              <item name="project_sb" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="project_sb" type="b2602c69:ProjectViewProjectNode" />
@@ -346,7 +379,21 @@
       <option name="project" value="LOCAL" />
       <updated>1545114889370</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="2018-12-18 #03 발주내역 배송사이트 연결 작업">
+      <created>1545117067999</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1545117067999</updated>
+    </task>
+    <task id="LOCAL-00008" summary="2018-12-18 #03 발주내역 배송사이트 연결 작업, 시리얼 번호 입력 추가">
+      <created>1545117309137</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1545117309137</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
@@ -363,15 +410,15 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.209584" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.209584" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.5012837" side_tool="true" weight="0.27450982" />
-      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.4987163" weight="0.25111112" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" sideWeight="0.4987163" visible="true" weight="0.25111112" />
       <window_info anchor="bottom" id="Python Console" order="2" weight="0.32555556" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" />
       <window_info anchor="bottom" id="Version Control" order="5" />
-      <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.27" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.27" />
       <window_info anchor="bottom" id="Debug" order="7" sideWeight="0.49935815" weight="0.30888888" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -417,7 +464,9 @@
     <MESSAGE value="2018-12-14 #02 로그아웃 기능 추가" />
     <MESSAGE value="2018-12-18 #01 세션 타임 아웃 시간 변경 (5분)" />
     <MESSAGE value="2018-12-18 #02 매입사 정보 표시 수정(Y/N, 공백처리)" />
-    <option name="LAST_COMMIT_MESSAGE" value="2018-12-18 #02 매입사 정보 표시 수정(Y/N, 공백처리)" />
+    <MESSAGE value="2018-12-18 #03 발주내역 배송사이트 연결 작업" />
+    <MESSAGE value="2018-12-18 #03 발주내역 배송사이트 연결 작업, 시리얼 번호 입력 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="2018-12-18 #03 발주내역 배송사이트 연결 작업, 시리얼 번호 입력 추가" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -507,13 +556,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="536">
           <caret line="92" column="32" selection-start-line="92" selection-start-column="32" selection-end-line="92" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Order/templates/Order/OrderDetailAddInfo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="566">
-          <caret line="99" column="7" lean-forward="true" selection-start-line="99" selection-start-column="7" selection-end-line="99" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -653,33 +695,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Order/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="68" column="133" selection-start-line="68" selection-start-column="133" selection-end-line="68" selection-end-column="133" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Prod/templates/Prod/SearchProdOffer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="62" column="9" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
           <folding>
             <element signature="n#style#0;n#button#0;n#h3#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Order/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="152" column="48" selection-start-line="152" selection-start-column="48" selection-end-line="152" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-            <marker date="1544684596448" expanded="true" signature="4757:4858" ph="..." />
           </folding>
         </state>
       </provider>
@@ -774,17 +795,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Order/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="53" column="47" selection-start-line="53" selection-start-column="47" selection-end-line="53" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-            <marker date="1544748530087" expanded="true" signature="3178:3180" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MST/templates/MST/vendor.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="424">
@@ -794,16 +804,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MST/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MST/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="55" column="139" lean-forward="true" selection-start-line="55" selection-start-column="139" selection-end-line="55" selection-end-column="139" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Order/templates/Order/Order.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -819,13 +819,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project_sb/global_variables.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="181" column="1" lean-forward="true" selection-start-line="181" selection-start-column="1" selection-end-line="181" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Order/templates/Order/OrderList.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
@@ -833,10 +826,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Order/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="58" column="90" selection-start-line="58" selection-start-column="78" selection-end-line="58" selection-end-column="90" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Order/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1867">
+          <caret line="53" column="47" selection-start-line="53" selection-start-column="47" selection-end-line="53" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+            <marker date="1544748530087" expanded="true" signature="3178:3180" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Order/templates/Order/OrderDetailAddInfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="82" column="40" lean-forward="true" selection-start-line="82" selection-start-column="40" selection-end-line="82" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="109" column="8" lean-forward="true" selection-start-line="109" selection-start-column="8" selection-end-line="109" selection-end-column="8" />
+        <state relative-caret-position="121">
+          <caret line="50" column="45" lean-forward="true" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Order/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="4" selection-end-column="41" />
+          <folding>
+            <marker date="1545117243738" expanded="true" signature="4825:4926" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MST/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="119" column="22" lean-forward="true" selection-start-line="119" selection-start-column="22" selection-end-line="119" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project_sb/global_variables.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="226" column="14" lean-forward="true" selection-start-line="226" selection-start-column="14" selection-end-line="226" selection-end-column="14" />
         </state>
       </provider>
     </entry>
