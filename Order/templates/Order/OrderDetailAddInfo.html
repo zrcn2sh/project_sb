@@ -94,6 +94,11 @@
                 <label for="id_LogiNo">송장번호 : </label>
                 {{ form.LogiNo }}
             </div>
+            <div>
+                {{ form.message.error }}
+                <label for="id_SerialNumber">시리얼번호 : </label>
+                {{ form.SerialNumber }}
+            </div>
             <button type="submit" value="Submit">저장</button>
         </form>
     </div>

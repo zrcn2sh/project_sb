@@ -56,7 +56,7 @@ class OrderAddInfoForm(forms.ModelForm):
 class OrderDetailAddInfoForm(forms.ModelForm):
     class Meta:
         model = OfferPriceDetail
-        fields = ['OfferNo','DeliveryDate','LogiType','LogiCompany','LogiNo']
+        fields = ['OfferNo','DeliveryDate','LogiType','LogiCompany','LogiNo','SerialNumber']
 
         widgets = {
             'OfferNo': TextInput(attrs={'readonly': 'True'}),

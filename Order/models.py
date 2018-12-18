@@ -58,6 +58,7 @@ class OfferPriceDetail(models.Model):
     LogiType = models.CharField(max_length=4, choices=LogiType_enumtype, blank=True)  # 배송방법
     LogiCompany = models.CharField(max_length=4, choices=LogiCompany_enumtype, blank=True)  # 배송업체
     LogiNo = models.CharField(max_length=50, blank=True)  # 송장번호
+    SerialNumber = models.TextField(blank=True, null=True) # 시리얼 번호
     # 끝
 
     #ReqUser = models.ForeignKey(CoUser, on_delete=models.CASCADE, related_name="OfferD_RegUser")        # 등록 사용자
