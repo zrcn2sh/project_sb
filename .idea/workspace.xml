@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5d6ba2a8-3236-4e68-b494-3bfd2c7f4243" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MST/templates/MST/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/MST/templates/MST/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_sb/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/project_sb/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_sb/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/project_sb/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,8 +28,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="54" column="39" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="39" />
+            <state relative-caret-position="420">
+              <caret line="114" column="7" lean-forward="true" selection-start-line="114" selection-start-column="7" selection-end-line="114" selection-end-column="7" />
               <folding>
                 <element signature="e#3665#3671#0" expanded="true" />
                 <element signature="e#3671#3677#0" expanded="true" />
@@ -75,8 +71,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/project_sb/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="129" column="29" selection-start-line="129" selection-start-column="29" selection-end-line="129" selection-end-column="29" />
+            <state relative-caret-position="159">
+              <caret line="65" column="43" selection-start-line="65" selection-start-column="43" selection-end-line="65" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -119,8 +115,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MST/templates/MST/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="14" lean-forward="true" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+            <state relative-caret-position="120">
+              <caret line="8" column="85" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="85" />
             </state>
           </provider>
         </entry>
@@ -206,14 +202,14 @@
         <option value="$PROJECT_DIR$/Order/views.py" />
         <option value="$PROJECT_DIR$/MST/templates/MST/vendor.html" />
         <option value="$PROJECT_DIR$/Prod/templates/Prod/Product.html" />
-        <option value="$PROJECT_DIR$/MST/templates/MST/login.html" />
         <option value="$PROJECT_DIR$/project_sb/urls.py" />
+        <option value="$PROJECT_DIR$/MST/templates/MST/login.html" />
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/project_sb/settings.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1920" />
     <option name="height" value="992" />
@@ -367,7 +363,14 @@
       <option name="project" value="LOCAL" />
       <updated>1544751654627</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="2018-12-14 #02 로그아웃 기능 추가">
+      <created>1544753981538</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1544753981538</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -380,11 +383,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="992" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="812" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.1569247" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.21000704" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.5012837" side_tool="true" weight="0.27450982" />
       <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.4987163" weight="0.25111112" />
@@ -392,7 +395,7 @@
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" />
       <window_info anchor="bottom" id="Version Control" order="5" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.38111112" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.27083334" />
       <window_info anchor="bottom" id="Debug" order="7" sideWeight="0.49935815" weight="0.30888888" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -435,7 +438,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2018-12-14 #1 가격제안 페이지 접속 오류 수정" />
     <MESSAGE value="2018-12-14 #2 시스템 버젼 표시" />
-    <option name="LAST_COMMIT_MESSAGE" value="2018-12-14 #2 시스템 버젼 표시" />
+    <MESSAGE value="2018-12-14 #02 로그아웃 기능 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="2018-12-14 #02 로그아웃 기능 추가" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -821,19 +825,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MST/templates/MST/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="14" lean-forward="true" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MST/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="386">
           <caret line="68" column="49" lean-forward="true" selection-start-line="68" selection-start-column="49" selection-end-line="68" selection-end-column="49" />
           <folding>
             <element signature="e#0#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MST/templates/MST/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="85" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="114" column="7" lean-forward="true" selection-start-line="114" selection-start-column="7" selection-end-line="114" selection-end-column="7" />
+          <folding>
+            <element signature="e#3665#3671#0" expanded="true" />
+            <element signature="e#3671#3677#0" expanded="true" />
+            <element signature="e#3677#3683#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -848,22 +864,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="54" column="39" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="39" />
-          <folding>
-            <element signature="e#3665#3671#0" expanded="true" />
-            <element signature="e#3671#3677#0" expanded="true" />
-            <element signature="e#3677#3683#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project_sb/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="129" column="29" selection-start-line="129" selection-start-column="29" selection-end-line="129" selection-end-column="29" />
+        <state relative-caret-position="159">
+          <caret line="65" column="43" selection-start-line="65" selection-start-column="43" selection-end-line="65" selection-end-column="43" />
         </state>
       </provider>
     </entry>
