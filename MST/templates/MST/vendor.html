@@ -39,7 +39,7 @@
                 <td>{{ vendor.ComNumber }}</td>
                 <td>{{ vendor.Chief }}</td>
                 <td>{{ vendor.Brand }}</td>
-                <td>{{ vendor.Major_YN }}</td>
+                <td>{% if vendor.Major_YN == True %}Y{% else %}N{% endif %}</td>
                     {% if vendor.ContactName2 == none %}
                      <td>{{ vendor.ContactName1 }}</td>
                      <td>{{ vendor.ContactTel1 }}</td>
@@ -53,10 +53,10 @@
                         {{ vendor.ContactMail2 }}</a></td>
                     {% endif %}
                 <td>{{ vendor.get_Status_display }}</td>
-                <td>{{ vendor.AccountNo }}</td>
-                <td>{{ vendor.PaymentMethod }}</td>
-                <td>{{ vendor.PaymentPeriod }}</td>
-                <td>{{ vendor.Contract_YN }}</td>
+                <td>{% if vendor.AccountNo != none %}{{ vendor.AccountNo }}{% endif %}</td>
+                <td>{% if vendor.PaymentMethod != none %}{{ vendor.PaymentMethod }}{% endif %}</td>
+                <td>{% if vendor.PaymentPeriod != none %}{{ vendor.PaymentPeriod }}{% endif %}</td>
+                <td>{% if vendor.Contract_YN == True %}Y{% else %}N{% endif %}</td>
                 <td>{{ vendor.Contract_Date }}</td>
                 <td>{{ vendor.ComPaper}}</td>
                 <td>{{ vendor.AccountPaper }}</td>
