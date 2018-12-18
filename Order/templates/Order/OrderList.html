@@ -85,7 +85,21 @@
                                     {% endif %}
                                     {% if orderlistdetail.LogiType == 'L' %}
                                     {{ orderlistdetail.get_LogiCompany_display }}
-                                    ( {{ orderlistdetail.LogiNo }} )
+                                    (
+                                       {% if orderlistdetail.LogiCompany == '1' %}
+                                            <a href = 'https://www.doortodoor.co.kr/parcel/doortodoor.do?fsp_action=PARC_ACT_002&fsp_cmd=retrieveInvNoACT&invc_no={{ orderlistdetail.LogiNo }}'
+                                       {% elif orderlistdetail.LogiCompany == '2' %}
+                                            <a href = 'http://service.epost.go.kr/trace.RetrieveRegiPrclDeliv.postal?sid1={{ orderlistdetail.LogiNo }}'
+                                       {% elif orderlistdetail.LogiCompany == '3' %}
+                                            <a href = 'http://www.hanjin.co.kr/Delivery_html/inquiry/result_waybill.jsp?wbl_num={{ orderlistdetail.LogiNo }}'
+                                       {% elif orderlistdetail.LogiCompany == '4' %}
+                                            <a href = 'https://www.lotteglogis.com/open/tracking?invno={{ orderlistdetail.LogiNo }}'
+                                       {% elif orderlistdetail.LogiCompany == '5' %}
+                                            <a href = 'http://d2d.ilogen.com/d2d/delivery/invoice_tracesearch_quick.jsp?slipno={{ orderlistdetail.LogiNo }}'
+                                       {% elif orderlistdetail.LogiCompany == '6' %}
+                                            <a href = 'http://kdexp.com/basicNewDelivery.kd?barcode={{ orderlistdetail.LogiNo }}'
+                                       {% endif %}
+                                         onclick="window.open(this.href,'logiinfo','width=800, height=800'); return false;">{{ orderlistdetail.LogiNo }}</a> )
                                     {% endif %}
                                 </td>
                                 <td>{{ orderlistdetail.DeliveryDate|date:"y.m.d" }}</td>
