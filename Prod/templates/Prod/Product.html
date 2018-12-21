@@ -168,7 +168,7 @@
                 <td><B>AX코드/명</B></td>
                 <td><B>상태</B></td>
                 <td><B>매입/매출/마진</B></td>
-                <td><B>재고운영여부</B></td>
+                <!--td><B>재고운영여부</B></td-->
                 <td><B>기타사항</B></td>
                 <td><B>세부사양</B></td>
             </tr>
@@ -188,7 +188,7 @@
                 <td>{{ product.AXProdCode }} <br> {{ product.AXProdName }}</td>
                 <td>{{ product.get_ProdStatus_display }}</td>
                 <td>{{ product.Basic_coprice|intcomma }}<br>{{ product.Basic_price|intcomma }}<br>{{ product.Margin }} %</td>
-                <td>{{ product.Inventory_YN }}</td>
+                <!--td>{{ product.Inventory_YN }}</td-->
                 <td>{{ product.Remark|linebreaksbr }}</td>
                 <td>
                     {% if product.ProdDiv == 'DT' %}
