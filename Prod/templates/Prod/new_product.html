@@ -62,6 +62,16 @@
         #DT, #MT, #NT, #SR, #ETC {
             display: none;
         }
+
+        #NEW {
+            font : 1em sans-serif;
+            border:none;
+            width : 30px;
+            border-radius:10px;
+            background-color:SlateBlue;
+            color: #ffffff;
+            text-align:center;
+         }
     </style>
     <meta charset="UTF-8">
     <title>상품 등록</title>
@@ -93,6 +103,8 @@
                 {{ form.message.error }}
                 <label for="id_VendorCode">매입사 : </label>
                 {{ form.VendorCode }}
+                <button type ="button" id="NEW" onclick="window.open('/MST/vendornew/','popupvendor','scrollbars=yes, resizable=no width=800,height=600')">
+                <font size = '2'><b>+</b></font></button>
             </div>
             <div>
                 {{ form.message.error }}
