@@ -13,14 +13,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Order/views.py">
+        <entry file="file://$PROJECT_DIR$/Order/templates/Order/OrderDetailAddInfo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="53" column="47" selection-start-line="53" selection-start-column="47" selection-end-line="53" selection-end-column="47" />
-              <folding>
-                <element signature="e#0#54#0" expanded="true" />
-                <marker date="1544748530087" expanded="true" signature="3178:3180" ph="..." />
-              </folding>
+            <state relative-caret-position="602">
+              <caret line="82" column="40" selection-start-line="82" selection-start-column="40" selection-end-line="82" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -28,8 +24,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="111" column="33" selection-start-line="111" selection-start-column="33" selection-end-line="111" selection-end-column="33" />
+            <state relative-caret-position="336">
+              <caret line="75" column="70" lean-forward="true" selection-start-line="75" selection-start-column="70" selection-end-line="75" selection-end-column="70" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Order/templates/Order/OrderAddInfo.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="536">
+              <caret line="92" column="32" selection-start-line="92" selection-start-column="32" selection-end-line="92" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -73,8 +78,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/base_MST.html">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/Order/templates/Order/Order.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1350">
+              <caret line="90" column="12" selection-start-line="90" selection-start-column="12" selection-end-line="90" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Order/templates/Order/OrderList.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="60" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -89,24 +107,6 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base_books.html">
           <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project_sb/global_variables.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="226" column="14" selection-start-line="226" selection-start-column="14" selection-end-line="226" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project_sb/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1875">
-              <caret line="125" column="24" selection-start-line="125" selection-start-column="24" selection-end-line="125" selection-end-column="24" />
-            </state>
-          </provider>
         </entry>
       </file>
     </leaf>
@@ -191,13 +191,13 @@
         <option value="$PROJECT_DIR$/MST/templates/MST/login.html" />
         <option value="$PROJECT_DIR$/MST/templates/MST/vendor.html" />
         <option value="$PROJECT_DIR$/project_sb/settings.py" />
-        <option value="$PROJECT_DIR$/Order/templates/Order/OrderList.html" />
         <option value="$PROJECT_DIR$/Order/models.py" />
         <option value="$PROJECT_DIR$/Order/forms.py" />
         <option value="$PROJECT_DIR$/Order/templates/Order/OrderDetailAddInfo.html" />
         <option value="$PROJECT_DIR$/MST/models.py" />
         <option value="$PROJECT_DIR$/project_sb/global_variables.py" />
         <option value="$PROJECT_DIR$/Prod/templates/Prod/ReqQuo.html" />
+        <option value="$PROJECT_DIR$/Order/templates/Order/OrderList.html" />
         <option value="$PROJECT_DIR$/templates/base.html" />
       </list>
     </option>
@@ -229,6 +229,19 @@
             <path>
               <item name="project_sb" type="b2602c69:ProjectViewProjectNode" />
               <item name="project_sb" type="462c0819:PsiDirectoryNode" />
+              <item name="Order" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project_sb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project_sb" type="462c0819:PsiDirectoryNode" />
+              <item name="Order" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project_sb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project_sb" type="462c0819:PsiDirectoryNode" />
+              <item name="Order" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="Order" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -422,7 +435,14 @@
       <option name="project" value="LOCAL" />
       <updated>1545359616186</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="2018-12-21 #01 PGM Version 표시 오류 수정, 메뉴-타이틀 통일">
+      <created>1545359899106</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1545359899106</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView">
@@ -537,7 +557,8 @@
     <MESSAGE value="2018-12-18 #03 발주내역 배송사이트 연결 작업, 시리얼 번호 입력 추가" />
     <MESSAGE value="2018-12-18 #04 게시판 모델 추가" />
     <MESSAGE value="2018-12-21 #01 PGM Version 표시 오류 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="2018-12-21 #01 PGM Version 표시 오류 수정" />
+    <MESSAGE value="2018-12-21 #01 PGM Version 표시 오류 수정, 메뉴-타이틀 통일" />
+    <option name="LAST_COMMIT_MESSAGE" value="2018-12-21 #01 PGM Version 표시 오류 수정, 메뉴-타이틀 통일" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -603,13 +624,6 @@
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Order/templates/Order/OrderAddInfo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="92" column="32" selection-start-line="92" selection-start-column="32" selection-end-line="92" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -827,13 +841,6 @@
     <entry file="file://$PROJECT_DIR$/MST/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Order/templates/Order/OrderDetailAddInfo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1230">
-          <caret line="82" column="40" selection-start-line="82" selection-start-column="40" selection-end-line="82" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Order/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="840">
@@ -861,20 +868,6 @@
           <folding>
             <marker date="1545117243738" expanded="true" signature="4825:4926" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Order/templates/Order/Order.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="90" column="12" selection-start-line="90" selection-start-column="12" selection-end-line="90" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Order/templates/Order/OrderList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1770">
-          <caret line="118" column="42" selection-start-line="118" selection-start-column="42" selection-end-line="118" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -948,10 +941,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Order/templates/Order/OrderAddInfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="92" column="32" selection-start-line="92" selection-start-column="32" selection-end-line="92" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Order/templates/Order/Order.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1350">
+          <caret line="90" column="12" selection-start-line="90" selection-start-column="12" selection-end-line="90" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Order/templates/Order/OrderDetailAddInfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="602">
+          <caret line="82" column="40" selection-start-line="82" selection-start-column="40" selection-end-line="82" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Order/templates/Order/OrderList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="60" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="111" column="33" selection-start-line="111" selection-start-column="33" selection-end-line="111" selection-end-column="33" />
+        <state relative-caret-position="336">
+          <caret line="75" column="70" lean-forward="true" selection-start-line="75" selection-start-column="70" selection-end-line="75" selection-end-column="70" />
         </state>
       </provider>
     </entry>
