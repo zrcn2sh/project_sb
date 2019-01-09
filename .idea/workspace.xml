@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5d6ba2a8-3236-4e68-b494-3bfd2c7f4243" name="Default Changelist" comment="2019-01-10 offeredit 접속 수정">
+    <list default="true" id="5d6ba2a8-3236-4e68-b494-3bfd2c7f4243" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prod/templates/Prod/Product.html" beforeDir="false" afterPath="$PROJECT_DIR$/Prod/templates/Prod/Product.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prod/templates/Prod/new_product.html" beforeDir="false" afterPath="$PROJECT_DIR$/Prod/templates/Prod/new_product.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_sb/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/project_sb/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Order/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Order/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,15 +14,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Prod/templates/Prod/new_product.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1695">
-              <caret line="113" column="19" selection-start-line="113" selection-start-column="19" selection-end-line="113" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Prod/templates/Prod/Product.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="296">
@@ -33,20 +22,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Order/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+            <state relative-caret-position="198">
+              <caret line="64" column="46" selection-start-line="64" selection-start-column="46" selection-end-line="64" selection-end-column="46" />
               <folding>
                 <element signature="e#0#54#0" expanded="true" />
-                <marker date="1544748530087" expanded="true" signature="3178:3180" ph="..." />
+                <marker date="1547077311973" expanded="true" signature="3181:3183" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project_sb/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="50" column="61" selection-start-line="50" selection-start-column="52" selection-end-line="50" selection-end-column="61" />
+              <folding>
+                <element signature="e#644#685#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project_sb/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="220">
@@ -192,7 +193,6 @@
         <option value="$PROJECT_DIR$/Order/templates/Order/Rental.html" />
         <option value="$PROJECT_DIR$/Order/templates/Order/Order.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/Order/views.py" />
         <option value="$PROJECT_DIR$/project_sb/urls.py" />
         <option value="$PROJECT_DIR$/MST/templates/MST/login.html" />
         <option value="$PROJECT_DIR$/MST/templates/MST/vendor.html" />
@@ -207,6 +207,7 @@
         <option value="$PROJECT_DIR$/Prod/templates/Prod/new_product.html" />
         <option value="$PROJECT_DIR$/Prod/templates/Prod/Product.html" />
         <option value="$PROJECT_DIR$/project_sb/settings.py" />
+        <option value="$PROJECT_DIR$/Order/views.py" />
       </list>
     </option>
   </component>
@@ -492,7 +493,21 @@
       <option name="project" value="LOCAL" />
       <updated>1545362504121</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="2019-01-10 offeredit 접속 수정, 세션 타임 아웃 시간 변경">
+      <created>1547075638949</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1547075638949</updated>
+    </task>
+    <task id="LOCAL-00019" summary="2019-01-10 offeredit 접속 수정, 세션 타임 아웃 시간 변경">
+      <created>1547076270763</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1547076270763</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView">
@@ -512,12 +527,12 @@
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.20010532" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.5012837" side_tool="true" weight="0.27450982" />
-      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.4987163" weight="0.25111112" />
+      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.4987163" visible="true" weight="0.25111112" />
       <window_info anchor="bottom" id="Python Console" order="2" weight="0.32555556" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" />
       <window_info anchor="bottom" id="Version Control" order="5" weight="0.41222224" />
-      <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.33666667" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.33666667" />
       <window_info anchor="bottom" id="Debug" order="7" sideWeight="0.49935815" weight="0.30888888" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -610,7 +625,8 @@
     <MESSAGE value="2018-12-21 #01 PGM Version 표시 오류 수정, 메뉴-타이틀 통일" />
     <MESSAGE value="2018-12-21 #01 PGM Version 표시 오류 수정, 메뉴-타이틀 통일, 상품 재고운영여부 숨김" />
     <MESSAGE value="2018-12-21 #01 PGM Version 표시 오류 수정, 메뉴-타이틀 통일, 상품 재고운영여부 숨김, 매입사 신규 버튼 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="2018-12-21 #01 PGM Version 표시 오류 수정, 메뉴-타이틀 통일, 상품 재고운영여부 숨김, 매입사 신규 버튼 추가" />
+    <MESSAGE value="2019-01-10 offeredit 접속 수정, 세션 타임 아웃 시간 변경" />
+    <option name="LAST_COMMIT_MESSAGE" value="2019-01-10 offeredit 접속 수정, 세션 타임 아웃 시간 변경" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -922,16 +938,6 @@
     <entry file="file://$PROJECT_DIR$/templates/base_books.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/project_sb/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="35" column="48" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="48" />
-          <folding>
-            <element signature="e#644#685#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Order/templates/Order/OrderDetailAddInfo.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1230">
@@ -1010,21 +1016,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Order/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-            <marker date="1544748530087" expanded="true" signature="3178:3180" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project_sb/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="119" lean-forward="true" selection-start-line="119" selection-end-line="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project_sb/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="50" column="61" selection-start-line="50" selection-start-column="52" selection-end-line="50" selection-end-column="61" />
+          <folding>
+            <element signature="e#644#685#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Order/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="64" column="46" selection-start-line="64" selection-start-column="46" selection-end-line="64" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+            <marker date="1547077311973" expanded="true" signature="3181:3183" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
