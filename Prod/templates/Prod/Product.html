@@ -164,7 +164,7 @@
                 <!--td><B>상품명</B></td-->
                 <td><B>브랜드명</B></td>
                 <td><B>매입사</B></td>
-                <td><B>AX등록/일자</B></td>
+                <td><B>AX등록일자</B></td>
                 <td><B>AX코드/명</B></td>
                 <td><B>상태</B></td>
                 <td><B>매입/매출/마진</B></td>
@@ -184,7 +184,7 @@
                 <!--td>{{ product.ProdName }}</td-->
                 <td>{{ product.ProdBrand }}</td>
                 <td>{{ product.VendorCode }}</td>
-                <td>{{ product.Mercury_YN }} <br> {{ product.AXRegDate|date:"y.m.d" }}</td>
+                <td><!--{{ product.Mercury_YN }} <br-->{{ product.AXRegDate|date:"y.m.d" }}</td>
                 <td>{{ product.AXProdCode }} <br> {{ product.AXProdName }}</td>
                 <td>{{ product.get_ProdStatus_display }}</td>
                 <td>{{ product.Basic_coprice|intcomma }}<br>{{ product.Basic_price|intcomma }}<br>{{ product.Margin }} %</td>
