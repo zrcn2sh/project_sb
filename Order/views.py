@@ -62,7 +62,7 @@ def OfferEdit(request, pk):
     else:
         form = OfferForm(instance=post)
 
-    return render(request, 'Order/new_offer.html', {'form':form})
+    return render(request, 'Order/new_Offer.html', {'form':form})
 
 @login_required
 def OfferDetail(request, pk):
