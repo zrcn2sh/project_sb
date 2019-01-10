@@ -25,10 +25,14 @@
                 {% endfor %}
             </div>
             <div>
-                <label for="id_proddiv">◼︎ 벤더사 : </label>
+                <label for="id_VendorCode">◼︎ 벤더사 : </label>
                 {% for choice in filter.form.VendorCode %}
                     {{ choice.tag }} {{ choice.choice_label }}
                 {% endfor %}
+            </div>
+            <div>
+                <label for="id_Warranty">◼︎ 유지보수 : </label>
+                {{ filter.form.Warranty }}
             </div>
             <div>
                 <label for="id_prodstatus">◼︎ 상태 : </label>
@@ -75,10 +79,14 @@
                         <label for="id_DTGraphicCard">- 그래픽카드 : </label>
                          {{ filter.form.DTGraphicCard }}
                     </div>
+                    <div>
+                        <label for="id_DTOS">- OS : </label>
+                         {{ filter.form.DTOS }}
+                    </div>
                 </div>
             </details>
             <details>
-                <summary id="DT">모니터 상세</summary>
+                <summary id="MT">모니터 상세</summary>
                 <div>
                     <div>
                         <label for="id_MTTYPE">- 타입 : </label>
@@ -145,6 +153,10 @@
                         <label for="id_NTGraphicCard">- 그래픽카드 : </label>
                          {{ filter.form.NTGraphicCard }}
                     </div>
+                    <div>
+                        <label for="id_NTOS">- OS : </label>
+                         {{ filter.form.NTOS }}
+                    </div>
                 </div>
             </details>
         </details>
@@ -169,8 +181,8 @@
                 <td><B>상태</B></td>
                 <td><B>매입/매출/마진</B></td>
                 <!--td><B>재고운영여부</B></td-->
-                <td><B>기타사항</B></td>
                 <td><B>세부사양</B></td>
+                <td><B>기타사항</B></td>
             </tr>
 
         </thread>
@@ -189,7 +201,7 @@
                 <td>{{ product.get_ProdStatus_display }}</td>
                 <td>{{ product.Basic_coprice|intcomma }}<br>{{ product.Basic_price|intcomma }}<br>{{ product.Margin }} %</td>
                 <!--td>{{ product.Inventory_YN }}</td-->
-                <td>{{ product.Remark|linebreaksbr }}</td>
+
                 <td>
                     {% if product.ProdDiv == 'DT' %}
                     <table class="table table-striped">
@@ -202,6 +214,8 @@
                                 <td><B>SSD</B></td>
                                 <td><B>G.C</B></td>
                                 <td><B>파워</B></td>
+                                <td><B>OS</B></td>
+                                <td><B>W</B></td>
                                 <td><B>키</B></td>
                                 <td><B>마</B></td>
                             </tr>
@@ -215,6 +229,8 @@
                                 <td>{{ product.get_DTSSD_display }}</td>
                                 <td>{{ product.DTGraphicCard }}</td>
                                 <td>{{ product.DTPower }} W</td>
+                                <td>{{ product.DTOS }}</td>
+                                <td>{{ product.Warranty }}</td>
                                 <td>{% if product.Keyboard_YN == True %}Y{% else %}N{% endif %}</td>
                                 <td>{% if product.DTMouse_YN == True %}Y{% else %}N{% endif %}</td>
                             </tr>
@@ -256,6 +272,8 @@
                                 <td><B>HDD</B></td>
                                 <td><B>SSD</B></td>
                                 <td><B>무게</B></td>
+                                <td><B>OS</B></td>
+                                <td><B>W</B></td>
                                 <td><B>파우치</B></td>
                                 <td><B>가방</B></td>
                             </tr>
@@ -269,6 +287,8 @@
                                 <td>{{ product.get_NTHDD_display }}</td>
                                 <td>{{ product.get_NTSSD_display }}</td>
                                 <td>{{ product.NTWeight }} kg</td>
+                                <td>{{ product.NTOS }}</td>
+                                <td>{{ product.Warranty }}</td>
                                 <td>{% if product.Keyboard_YN == True %}Y{% else %}N{% endif %}</td>
                                 <td>{% if product.NTMouse_YN == True %}Y{% else %}N{% endif %}</td>
                             </tr>
@@ -314,7 +334,7 @@
                     </table>
                     {% endif %}
                 </td>
-
+                <td>{{ product.Remark|linebreaksbr }}</td>
             </tr>
 
             {% endfor %}

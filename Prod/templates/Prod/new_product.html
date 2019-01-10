@@ -135,22 +135,22 @@
             <div>
                 {{ form.message.error }}
                 <label for="id_Basic_coprice">매입가 : </label>
-                {{ form.Basic_coprice}}
+                {{ form.Basic_coprice }}
             </div>
             <div>
                 {{ form.message.error }}
                 <label for="id_Basic_price">매출가 : </label>
-                {{ form.Basic_price}}
+                {{ form.Basic_price }}
             </div>
-            <!--div>
+            <div>
                 {{ form.message.error }}
-                <label for="id_Inventory_YN">재고운영여부 : </label>
-                {{ form.Inventory_YN}}
-            </div-->
+                <label for="id_Warranty">유지보수 : </label>
+                {{ form.Warranty }}
+            </div>
             <div>
                 {{ form.message.error }}
                 <label for="id_Remark">기타 : </label>
-                {{ form.Remark}}
+                {{ form.Remark }}
             </div>
             <div id = "DetailDiv">세부 사양 등록</div>
                 <div id = "DT">
@@ -216,9 +216,15 @@
                     </div>
                     <div>
                         {{ form.message.error }}
+                        <label for="id_DTOS">- OS : </label>
+                        {{ form.DTOS }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
                         <label for="id_DTRemark">- 기타사양 : </label>
                         {{ form.DTRemark }}
                     </div>
+
                 </div>
                 <div id = "MT">
                     <div>
@@ -332,6 +338,11 @@
                         {{ form.message.error }}
                         <label for="id_NTWeight">- 무게 : </label>
                         {{ form.NTWeight }}
+                    </div>
+                    <div>
+                        {{ form.message.error }}
+                        <label for="id_NTOS">- OS : </label>
+                        {{ form.NTOS }}
                     </div>
                     <div>
                         {{ form.message.error }}

@@ -98,6 +98,9 @@ class ProductList(models.Model):
     NTWeight = models.FloatField(blank=True, default=0)  # 무게
     MTWeight = models.FloatField(blank=True, default=0)  # 무게
     SRWeight = models.FloatField(blank=True, default=0)  # 무게
+    DTOS = models.CharField(max_length=100, blank=True)  # DT OS
+    NTOS = models.CharField(max_length=100, blank=True)  # NT OS
+    Warranty = models.CharField(max_length=5, default='1년') # Warranty
     Ratio = models.CharField(max_length=2, choices=Ratio_enumtype, blank=True)  #화면비율
     Resolution = models.CharField(max_length=2, choices=Resolution_enumtype, blank=True)    #해상도
     Panel = models.CharField(max_length=2, choices=Panel_enumtype, blank=True)  #패널타입

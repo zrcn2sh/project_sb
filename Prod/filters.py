@@ -11,6 +11,7 @@ class ProductOfferFilter(django_filters.FilterSet):
     VendorCode = django_filters.ModelMultipleChoiceFilter(queryset=CoVendor.objects.all(),
                                                           widget=forms.CheckboxSelectMultiple)
     ProdStatus = django_filters.MultipleChoiceFilter(choices=Product_status,widget=forms.CheckboxSelectMultiple)
+    Warranty = django_filters.CharFilter(lookup_expr='icontains')
     #데스크탑
     DTType = django_filters.MultipleChoiceFilter(choices=DT_enumtype, widget=forms.CheckboxSelectMultiple)
     DTCPU = django_filters.MultipleChoiceFilter(choices=CPU_enumtype, widget=forms.CheckboxSelectMultiple)
@@ -19,6 +20,7 @@ class ProductOfferFilter(django_filters.FilterSet):
     DTHDD = django_filters.MultipleChoiceFilter(choices=HDD_enumtype, widget=forms.CheckboxSelectMultiple)
     DTSSD = django_filters.MultipleChoiceFilter(choices=SSD_enumtype, widget=forms.CheckboxSelectMultiple)
     DTGraphicCard = django_filters.CharFilter(lookup_expr='icontains')
+    DTOS = django_filters.CharFilter(lookup_expr='icontains')
 
     #모니터
     MTType = django_filters.MultipleChoiceFilter(choices=MT_enumtype, widget=forms.CheckboxSelectMultiple)
@@ -34,6 +36,7 @@ class ProductOfferFilter(django_filters.FilterSet):
     NTHDD = django_filters.MultipleChoiceFilter(choices=HDD_enumtype, widget=forms.CheckboxSelectMultiple)
     NTSSD = django_filters.MultipleChoiceFilter(choices=SSD_enumtype, widget=forms.CheckboxSelectMultiple)
     NTGraphicCard = django_filters.CharFilter(lookup_expr='icontains')
+    NTOS = django_filters.CharFilter(lookup_expr='icontains')
 
     class Meta:
         model = ProductList
@@ -41,4 +44,4 @@ class ProductOfferFilter(django_filters.FilterSet):
                   'DTType','DTCPU','DTCPUDetail','DTRAM','DTHDD','DTSSD','DTGraphicCard',
                   'MTType','Ratio','Resolution','Panel',
                   'NTType','NTCPU','NTCPUDetail','NTRAM','NTHDD','NTSSD','NTGraphicCard',
-                  'Basic_coprice','Basic_price']
+                  'Basic_coprice','Basic_price','Warranty','DTOS','NTOS']

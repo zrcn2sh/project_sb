@@ -20,7 +20,7 @@ class ProductForm(forms.ModelForm):
                   'NTIORemark','MTIORemark','NTScreenSize','DTRemark','NTRemark','MTRemark','SRRemark','NTMouse_YN',
                   'MTScreenSize','NTWeight','DTWeight','MTWeight','SRWeight','Ratio','Resolution','Panel','ReqSpeed','BWRatio',
                   'SRInputWidth','SRCuttingSize','SRCapacity','SRPowerCon','ETCRemark1','ETCRemark2',
-                  'ETCRemark3','RegUser','UpdateUser','Remark']
+                  'ETCRemark3','RegUser','UpdateUser','Remark','DTOS','NTOS','Warranty']
         widgets = {
                     'ProdDiv' : SelectInput(attrs={'onchange':'toggle_div(this.value);'}),
                     'AXRegDate' : DateInput()
