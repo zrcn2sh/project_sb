@@ -8,6 +8,8 @@ class TextInput(forms.TextInput):
 class DateInput(forms.DateInput):
     input_type = 'date'
 
+
+
 class VendorForm(forms.ModelForm):
     class Meta:
         model = CoVendor
@@ -19,6 +21,10 @@ class VendorForm(forms.ModelForm):
         widgets = {
                    'ContractDate' : DateInput()
                    }
+    def __init__(self, *args, **kwargs):
+        super(VendorForm, self).__init__(*args, **kwargs)
+        self.fields['ComPaper'].required = False
+        self.fields['AccountPaper'].required = False
 
 class LoginForm(forms.ModelForm):
     class Meta:

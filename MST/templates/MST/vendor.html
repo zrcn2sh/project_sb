@@ -58,8 +58,14 @@
                 <td>{% if vendor.PaymentPeriod != none %}{{ vendor.PaymentPeriod }}{% endif %}</td>
                 <td>{% if vendor.Contract_YN == True %}Y{% else %}N{% endif %}</td>
                 <td>{{ vendor.Contract_Date }}</td>
-                <td>{{ vendor.ComPaper}}</td>
-                <td>{{ vendor.AccountPaper }}</td>
+                <td>{% if vendor.ComPaper != '' %}
+                    <a href="#" onclick="javascript:window.open('{{ vendor.ComPaper.url }}','popup',
+                    'scrollbars=no, resizable=no width=800,height=600')">파일열기</a>
+                    {% else %}없음{% endif %}</td>
+                <td>{% if vendor.AccountPaper != '' %}
+                    <a href="#" onclick="javascript:window.open('{{ vendor.AccountPaper.url }}','popup',
+                    'scrollbars=no, resizable=no width=800,height=600')">파일열기</a>
+                    {% else %}없음{% endif %}</td>
 
             </tr>
 

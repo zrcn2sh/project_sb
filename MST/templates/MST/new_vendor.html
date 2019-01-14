@@ -4,7 +4,7 @@
     <style type="text/css">
         form {
             margin : 0 0;
-            width : 450px;
+            width : 550px;
 
             padding : 1em;
             border : 1px solid #CCC;
@@ -56,7 +56,7 @@
     <h3><B>매입사 등록</B></h3>
 
     <div>
-        <form method="POST">
+        <form method="POST" action='' enctype="multipart/form-data">
             {% csrf_token %}
             <div>
                 {{ form.message.error }}
@@ -176,7 +176,7 @@
             <div>
                 {{ form.message.error }}
                 <label for="id_ComPaper">사업자등록증 : </label>
-                {{ form.ComPaper}}
+                {{ form.ComPaper }}
             </div>
             <div>
                 {{ form.message.error }}

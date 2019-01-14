@@ -22,7 +22,7 @@ from MST import views as viewsMST
 from Prod import views as viewsProd
 from Order import views as viewsOrder
 
-urlpatterns = (
+urlpatterns = [
     url(r'^$', viewsMST.signin, name='login'),
     url(r'^logout/',auth_views.LogoutView.as_view(), name='logout'),
     url(r'^admin/', admin.site.urls),
@@ -61,6 +61,6 @@ urlpatterns = (
     url(r'^Order/rentaledit/(?P<pk>\d+)', viewsOrder.RentalEdit, name='RentalEdit'),
     url(r'^login/', viewsMST.signin, name='login'),
 
-)
+]
 
-"""urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)"""
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

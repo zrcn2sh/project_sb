@@ -34,7 +34,7 @@ def Dept(request):
 
 def VendorNew(request):
     if request.method == 'POST':
-        form = VendorForm(request.POST)
+        form = VendorForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
         return HttpResponse('<script type="text/javascript">alert("저장되었습니다.");window.close();opener.location.reload();</script>')
@@ -46,7 +46,7 @@ def VendorNew(request):
 def VendorEdit(request, pk):
     post = get_object_or_404(CoVendor, pk=pk)
     if request.method == 'POST':
-        form = VendorForm(request.POST, instance=post)
+        form = VendorForm(request.POST, request.FILES, instance=post)
         if form.is_valid():
             form.save()
         return HttpResponse('<script type="text/javascript">alert("저장되었습니다.");window.close();opener.location.reload();</script>')
