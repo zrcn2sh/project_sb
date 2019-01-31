@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d6ba2a8-3236-4e68-b494-3bfd2c7f4243" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MST/migrations/0025_codevboard_codevboardreply.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/vendor/괌여행일정ver2.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/vendor/괌여행일정ver2_233RvBc.pdf" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +25,15 @@
                 <element signature="n#style#0;n#textarea#0;n#td#7;n#tr#0;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#textarea#0;n#td#8;n#tr#0;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="457">
+              <caret line="110" column="23" lean-forward="true" selection-start-line="110" selection-start-column="23" selection-end-line="110" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -48,25 +59,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Prod/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
               <caret line="58" column="88" lean-forward="true" selection-start-line="58" selection-start-column="88" selection-end-line="58" selection-end-column="88" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Order/templates/Order/offerdetail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="134" column="192" selection-start-line="134" selection-start-column="192" selection-end-line="134" selection-end-column="192" />
-              <folding>
-                <element signature="n#style#0;n#button#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -203,7 +202,6 @@
         <option value="$PROJECT_DIR$/Prod/templates/Prod/ReqQuo.html" />
         <option value="$PROJECT_DIR$/Order/templates/Order/OrderList.html" />
         <option value="$PROJECT_DIR$/Order/views.py" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/Prod/models.py" />
         <option value="$PROJECT_DIR$/Prod/forms.py" />
         <option value="$PROJECT_DIR$/Prod/filters.py" />
@@ -219,6 +217,7 @@
         <option value="$PROJECT_DIR$/Order/templates/Order/OfferOrder.html" />
         <option value="$PROJECT_DIR$/Prod/templates/Prod/new_product.html" />
         <option value="$PROJECT_DIR$/project_sb/global_variables.py" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
       </list>
     </option>
   </component>
@@ -244,11 +243,28 @@
             <path>
               <item name="project_sb" type="b2602c69:ProjectViewProjectNode" />
               <item name="project_sb" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project_sb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project_sb" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project_sb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project_sb" type="462c0819:PsiDirectoryNode" />
               <item name="MST" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="project_sb" type="b2602c69:ProjectViewProjectNode" />
               <item name="project_sb" type="462c0819:PsiDirectoryNode" />
+              <item name="MST" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project_sb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project_sb" type="462c0819:PsiDirectoryNode" />
               <item name="Prod" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -268,6 +284,11 @@
               <item name="project_sb" type="b2602c69:ProjectViewProjectNode" />
               <item name="project_sb" type="462c0819:PsiDirectoryNode" />
               <item name="project_sb" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project_sb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project_sb" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -565,7 +586,21 @@
       <option name="project" value="LOCAL" />
       <updated>1548902531872</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="2019-01-31 #01 상품 신규 등록 시에 타입 기타로 설정하면 저장 안되는 문제 수정">
+      <created>1548902663004</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1548902663004</updated>
+    </task>
+    <task id="LOCAL-00031" summary="2019-01-31 #01 상품 신규 등록 시에 타입 기타로 설정하면 저장 안되는 문제 수정">
+      <created>1548902720929</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1548902720929</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TodoView">
@@ -579,10 +614,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="812" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.18393235" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.18393235" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.5012837" side_tool="true" weight="0.27450982" />
       <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.4987163" weight="0.25" />
@@ -590,7 +624,7 @@
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" />
       <window_info anchor="bottom" id="Version Control" order="5" weight="0.41111112" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.09166667" />
+      <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.09166667" />
       <window_info anchor="bottom" id="Debug" order="7" sideWeight="0.49935815" weight="0.30833334" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -687,7 +721,8 @@
     <MESSAGE value="2019-01-10 offeredit 접속 수정, 세션 타임 아웃 시간 변경, 물품 OS,Warranty 추가" />
     <MESSAGE value="2019-01-10 파일 업로드 기능 추가" />
     <MESSAGE value="2019-01-31 상품 신규 등록 시에 타입 기타로 설정하면 저장 안되는 문제 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="2019-01-31 상품 신규 등록 시에 타입 기타로 설정하면 저장 안되는 문제 수정" />
+    <MESSAGE value="2019-01-31 #01 상품 신규 등록 시에 타입 기타로 설정하면 저장 안되는 문제 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="2019-01-31 #01 상품 신규 등록 시에 타입 기타로 설정하면 저장 안되는 문제 수정" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -953,13 +988,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="91" column="54" lean-forward="true" selection-start-line="91" selection-start-column="54" selection-end-line="91" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Prod/filters.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
@@ -1124,6 +1152,13 @@
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="110" column="23" lean-forward="true" selection-start-line="110" selection-start-column="23" selection-end-line="110" selection-end-column="23" />
         </state>
       </provider>
     </entry>
